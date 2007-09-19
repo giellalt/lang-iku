@@ -1,199 +1,162 @@
 #!/usr/bin/perl -w
 use utf8;
 
-while (<>) 
+while (<>)
 {
-# convert syllabics to latin
-
-s/nngaai//g ; 
-s/nngii/ᙱ/g ; 
-s/nnguu/ᙳ/g ; 
-s/nngaa/ᙵ/g ; 
-
-s/ngaai/ᙰ/g ; 
-s/ngii/ᖏ/g ; 
-s/nguu/ᖑ/g ; 
-s/ngaa/ᖓ/g ; 
-
-s/paai/ᐯ/g ; 
-s/pii/ᐲ/g ; 
-s/puu/ᐴ/g ; 
-s/paa/ᐹ/g ; 
-
-s/taai/ᑌ/g ; 
-s/tii/ᑏ/g ; 
-s/tuu/ᑑ/g ; 
-s/taa/ᑖ/g ; 
-
-s/kaai/ᑫ/g ; 
-s/kii/ᑮ/g ; 
-s/kuu/ᑰ/g ; 
-s/kaa/ᑳ/g ; 
-
-s/gaai/ᒉ/g ; 
-s/gii/ᒌ/g ; 
-s/guu/ᒎ/g ; 
-s/gaa/ᒑ/g ; 
-
-s/maai/ᒣ/g ; 
-s/mii/ᒦ/g ; 
-s/muu/ᒨ/g ; 
-s/maa/ᒫ/g ; 
-
-s/naai/ᓀ/g ; 
-s/nii/ᓃ/g ; 
-s/nuu/ᓅ/g ; 
-s/naa/ᓈ/g ; 
-
-s/saai/ᓭ/g ; 
-s/sii/ᓰ/g ; 
-s/suu/ᓲ/g ; 
-s/saa/ᓵ/g ; 
-
-s/haai/ᓭ/g ; 
-s/hii/ᓰ/g ; 
-s/huu/ᓲ/g ; 
-s/haa/ᓵ/g ; 
-
-s/laai/ᓓ/g ; 
-s/lii/ᓖ/g ; 
-s/luu/ᓘ/g ; 
-s/laa/ᓛ/g ; 
-
-s/jaai/ᔦ/g ; 
-s/jii/ᔩ/g ; 
-s/juu/ᔫ/g ; 
-s/jaa/ᔮ/g ; 
-
-s/vaai/ᕓ/g ; 
-s/vii/ᕖ/g ; 
-s/vuu/ᕘ/g ; 
-s/vaa/ᕚ/g ; 
-
-s/raai/ᕃ/g ; 
-s/rii/ᕇ/g ; 
-s/ruu/ᕉ/g ; 
-s/raa/ᕌ/g ; 
-
-s/qaai/ᙯ/g ; 
-s/qii/ᖀ/g ; 
-s/quu/ᖂ/g ; 
-s/qaa/ᖄ/g ; 
-
-s/łaai//g ; 
-s/łii/ᖡ/g ; 
-s/łuu/ᖣ/g ; 
-s/łaa/ᖥ/g ; 
-
-s/aai/ᐁ/g ; #?
-s/ii/ᐄ/g ; 
-s/uu/ᐆ/g ; 
-s/aa/ᐋ/g ; 
+# convert syllabics to latinX# convert syllabics to latin
 
 
-
-s/nngai//g ; 
-s/nngi/ᙱ/g ; 
-s/nngu/ᙳ/g ; 
-s/nnga/ᙵ/g ; 
-
-s/ngai/ᙰ/g ; 
-s/ngi/ᖏ/g ; 
-s/ngu/ᖑ/g ; 
-s/nga/ᖓ/g ; 
-
-s/pai/ᐯ/g ; 
-s/pi/ᐱ/g ; 
-s/pu/ᐳ/g ; 
-s/pa/ᐸ/g ; 
-
-s/tai/ᑌ/g ; 
-s/ti/ᑎ/g ; 
-s/tu/ᑐ/g ; 
-s/ta/ᑕ/g ; 
-
-s/kai/ᑫ/g ; 
-s/ki/ᑭ/g ; 
-s/ku/ᑯ/g ; 
-s/ka/ᑲ/g ; 
-
-s/gai/ᒉ/g ; 
-s/gi/ᒋ/g ; 
-s/gu/ᒍ/g ; 
-s/ga/ᒐ/g ; 
-
-s/mai/ᒣ/g ; 
-s/mi/ᒥ/g ; 
-s/mu/ᒧ/g ; 
-s/ma/ᒪ/g ; 
-
-s/nai/ᓀ/g ; 
-s/ni/ᓂ/g ; 
-s/nu/ᓄ/g ; 
-s/na/ᓇ/g ; 
-
-s/sai/ᓭ/g ; 
-s/si/ᓯ/g ; 
-s/su/ᓱ/g ; 
-s/sa/ᓴ/g ; 
-
-s/hai/ᓭ/g ; 
-s/hi/ᓯ/g ; 
-s/hu/ᓱ/g ; 
-s/ha/ᓴ/g ; 
-
-s/lai/ᓓ/g ; 
-s/li/ᓕ/g ; 
-s/lu/ᓗ/g ; 
-s/la/ᓚ/g ; 
-
-s/jai/ᔦ/g ; 
-s/ji/ᔨ/g ; 
-s/ju/ᔪ/g ; 
-s/ja/ᔭ/g ; 
-
-s/vai/ᕓ/g ; 
-s/vi/ᕕ/g ; 
-s/vu/ᕗ/g ; 
-s/va/ᕙ/g ; 
-
-s/rai/ᕃ/g ; 
-s/ri/ᕆ/g ; 
-s/ru/ᕈ/g ; 
-s/ra/ᕋ/g ; 
-
-s/qai/ᙯ/g ; 
-s/qi/ᕿ/g ; 
-s/qu/ᖁ/g ; 
-s/qa/ᖃ/g ; 
-
-s/łai//g ; 
-s/łi/ᖠ/g ; 
-s/łu/ᖢ/g ; 
-s/ła/ᖤ/g ; 
-
-s/ai/ᐁ/g ; 
-s/i/ᐃ/g ; 
-s/u/ᐅ/g ; 
-s/a/ᐊ/g ; 
-
-s/p/ᑉ/g ;
-s/t/ᑦ/g ;
-s/k/ᒃ/g ;
-s/g/ᖅ/g ;
-s/m/ᒻ/g ;
-s/n/ᓐ/g ;
-s/s/ᔅ/g ;
-s/h/ᕻ/g ;
-s/l/ᓪ/g ;
-s/j//g ;
-s/v/ᕝ/g ;
-s/r/ᕐ/g ;
-s/q/ᖅ/g ;
-s/ng/ᖕ/g ;
-s/nng/ᖖ/g ;
-s/ł/ᖦ/g ;
-
+s/ᙱ/nngii/g ;
+s/ᙳ/nnguu/g ;
+s/ᙵ/nngaa/g ;
+s/ᙰ/ngaai/g ;
+s/ᖏ/ngii/g ;
+s/ᖑ/nguu/g ;
+s/ᖓ/ngaa/g ;
+s/ᐯ/paai/g ;
+s/ᐲ/pii/g ;
+s/ᐴ/puu/g ;
+s/ᐹ/paa/g ;
+s/ᑌ/taai/g ;
+s/ᑏ/tii/g ;
+s/ᑑ/tuu/g ;
+s/ᑖ/taa/g ;
+s/ᑫ/kaai/g ;
+s/ᑮ/kii/g ;
+s/ᑰ/kuu/g ;
+s/ᑳ/kaa/g ;
+s/ᒉ/gaai/g ;
+s/ᒌ/gii/g ;
+s/ᒎ/guu/g ;
+s/ᒑ/gaa/g ;
+s/ᒣ/maai/g ;
+s/ᒦ/mii/g ;
+s/ᒨ/muu/g ;
+s/ᒫ/maa/g ;
+s/ᓀ/naai/g ;
+s/ᓃ/nii/g ;
+s/ᓅ/nuu/g ;
+s/ᓈ/naa/g ;
+s/ᓭ/saai/g ;
+s/ᓰ/sii/g ;
+s/ᓲ/suu/g ;
+s/ᓵ/saa/g ;
+s/ᓭ/haai/g ;
+s/ᓰ/hii/g ;
+s/ᓲ/huu/g ;
+s/ᓵ/haa/g ;
+s/ᓓ/laai/g ;
+s/ᓖ/lii/g ;
+s/ᓘ/luu/g ;
+s/ᓛ/laa/g ;
+s/ᔦ/jaai/g ;
+s/ᔩ/jii/g ;
+s/ᔫ/juu/g ;
+s/ᔮ/jaa/g ;
+s/ᕓ/vaai/g ;
+s/ᕖ/vii/g ;
+s/ᕘ/vuu/g ;
+s/ᕚ/vaa/g ;
+s/ᕃ/raai/g ;
+s/ᕇ/rii/g ;
+s/ᕉ/ruu/g ;
+s/ᕌ/raa/g ;
+s/ᙯ/qaai/g ;
+s/ᖀ/qii/g ;
+s/ᖂ/quu/g ;
+s/ᖄ/qaa/g ;
+s//łaai/g ;
+s/ᖡ/łii/g ;
+s/ᖣ/łuu/g ;
+s/ᖥ/łaa/g ;
+s/ᐁ/aai/g ;
+s/ᐄ/ii/g ;
+s/ᐆ/uu/g ;
+s/ᐋ/aa/g ;
+s//nngai/g ;
+s/ᙱ/nngi/g ;
+s/ᙳ/nngu/g ;
+s/ᙵ/nnga/g ;
+s/ᙰ/ngai/g ;
+s/ᖏ/ngi/g ;
+s/ᖑ/ngu/g ;
+s/ᖓ/nga/g ;
+s/ᐯ/pai/g ;
+s/ᐱ/pi/g ;
+s/ᐳ/pu/g ;
+s/ᐸ/pa/g ;
+s/ᑌ/tai/g ;
+s/ᑎ/ti/g ;
+s/ᑐ/tu/g ;
+s/ᑕ/ta/g ;
+s/ᑫ/kai/g ;
+s/ᑭ/ki/g ;
+s/ᑯ/ku/g ;
+s/ᑲ/ka/g ;
+s/ᒉ/gai/g ;
+s/ᒋ/gi/g ;
+s/ᒍ/gu/g ;
+s/ᒐ/ga/g ;
+s/ᒣ/mai/g ;
+s/ᒥ/mi/g ;
+s/ᒧ/mu/g ;
+s/ᒪ/ma/g ;
+s/ᓀ/nai/g ;
+s/ᓂ/ni/g ;
+s/ᓄ/nu/g ;
+s/ᓇ/na/g ;
+s/ᓭ/sai/g ;
+s/ᓯ/si/g ;
+s/ᓱ/su/g ;
+s/ᓴ/sa/g ;
+s/ᓭ/hai/g ;
+s/ᓯ/hi/g ;
+s/ᓱ/hu/g ;
+s/ᓴ/ha/g ;
+s/ᓓ/lai/g ;
+s/ᓕ/li/g ;
+s/ᓗ/lu/g ;
+s/ᓚ/la/g ;
+s/ᔦ/jai/g ;
+s/ᔨ/ji/g ;
+s/ᔪ/ju/g ;
+s/ᔭ/ja/g ;
+s/ᕓ/vai/g ;
+s/ᕕ/vi/g ;
+s/ᕗ/vu/g ;
+s/ᕙ/va/g ;
+s/ᕃ/rai/g ;
+s/ᕆ/ri/g ;
+s/ᕈ/ru/g ;
+s/ᕋ/ra/g ;
+s/ᙯ/qai/g ;
+s/ᕿ/qi/g ;
+s/ᖁ/qu/g ;
+s/ᖃ/qa/g ;
+s//łai/g ;
+s/ᖠ/łi/g ;
+s/ᖢ/łu/g ;
+s/ᖤ/ła/g ;
+s/ᐁ/ai/g ;
+s/ᐃ/i/g ;
+s/ᐅ/u/g ;
+s/ᐊ/a/g ;
+s/ᑉ/p/g ;
+s/ᑦ/t/g ;
+s/ᒃ/k/g ;
+s/ᖅ/g/g ;
+s/ᒻ/m/g ;
+s/ᓐ/n/g ;
+s/ᔅ/s/g ;
+s/ᕻ/h/g ;
+s/ᓪ/l/g ;
+s//j/g ;
+s/ᕝ/v/g ;
+s/ᕐ/r/g ;
+s/ᖅ/q/g ;
+s/ᖕ/ng/g ;
+s/ᖖ/nng/g ;
+s/ᖦ/ł/g ;
 
 print ;
 }
