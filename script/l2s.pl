@@ -3,9 +3,9 @@ use utf8;
 
 while (<>) 
 {
-# convert syllabics to latin
+# convert latin to syllabics
 
-s/nngaai//g ; 
+#s/nngaai//g ; 
 s/nngii/ᙱ/g ; 
 s/nnguu/ᙳ/g ; 
 s/nngaa/ᙵ/g ; 
