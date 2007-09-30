@@ -1,215 +1,220 @@
-define nngii = [ n n g i i ] -> ᙱ  ; 
-define nnguu = [ n n g u u ] -> ᙳ  ; 
-define nngaa = [ n n g a a ] -> ᙵ  ; 
+define nngii [ n n g i i ] -> ᙱ  ; 
+define nnguu [ n n g u u ] -> ᙳ  ; 
+define nngaa [ n n g a a ] -> ᙵ  ; 
 
-define ngaai = [ n g a a i ] -> ᙰ  ; 
-define ngii = [ n g i i ] -> ᖏ  ; 
-define nguu = [ n g u u ] -> ᖑ  ; 
-define ngaa = [ n g a a ] -> ᖓ  ; 
+define NNG [ n n g ] -> ᖖ ;
 
-define paai = [ p a a i ] -> ᐯ  ; 
-define pii = [ p i i ] -> ᐲ  ; 
-define puu = [ p u u ] -> ᐴ  ; 
-define paa = [ p a a ] -> ᐹ  ; 
+define ngaai [ n g a a i ] -> ᙰ  ; 
+define ngii [ n g i i ] -> ᖏ  ; 
+define nguu [ n g u u ] -> ᖑ  ; 
+define ngaa [ n g a a ] -> ᖓ  ; 
 
-define taai = [ t a a i ] -> ᑌ  ; 
-define tii = [ t i i ] -> ᑏ  ; 
-define tuu = [ t u u ] -> ᑑ  ; 
-define taa = [ t a a ] -> ᑖ  ; 
+define NG n g  -> ᖕ ;
 
-define kaai = [ k a a i ] -> ᑫ  ; 
-define kii = [ k i i ] -> ᑮ  ; 
-define kuu = [ k u u ] -> ᑰ  ; 
-define kaa = [ k a a ] -> ᑳ  ; 
+define paai [ p a a i ] -> ᐯ  ; 
+define pii [ p i i ] -> ᐲ  ; 
+define puu [ p u u ] -> ᐴ  ; 
+define paa [ p a a ] -> ᐹ  ; 
 
-define gaai = [ g a a i ] -> ᒉ  ; 
-define gii = [ g i i ] -> ᒌ  ; 
-define guu = [ g u u ] -> ᒎ  ; 
-define gaa = [ g a a ] -> ᒑ  ; 
+define taai [ t a a i ] -> ᑌ  ; 
+define tii [ t i i ] -> ᑏ  ; 
+define tuu [ t u u ] -> ᑑ  ; 
+define taa [ t a a ] -> ᑖ  ; 
 
-define maai = [ m a a i ] -> ᒣ  ; 
-define mii = [ m i i ] -> ᒦ  ; 
-define muu = [ m u u ] -> ᒨ  ; 
-define maa = [ m a a ] -> ᒫ  ; 
+define kaai [ k a a i ] -> ᑫ  ; 
+define kii [ k i i ] -> ᑮ  ; 
+define kuu [ k u u ] -> ᑰ  ; 
+define kaa [ k a a ] -> ᑳ  ; 
 
-define naai = [ n a a i ] -> ᓀ  ; 
-define nii = [ n i i ] -> ᓃ  ; 
-define nuu = [ n u u ] -> ᓅ  ; 
-define naa = [ n a a ] -> ᓈ  ; 
+define gaai [ g a a i ] -> ᒉ  ; 
+define gii [ g i i ] -> ᒌ  ; 
+define guu [ g u u ] -> ᒎ  ; 
+define gaa [ g a a ] -> ᒑ  ; 
 
-define saai = [ s a a i ] -> ᓭ  ; 
-define sii = [ s i i ] -> ᓰ  ; 
-define suu = [ s u u ] -> ᓲ  ; 
-define saa = [ s a a ] -> ᓵ  ; 
+define maai [ m a a i ] -> ᒣ  ; 
+define mii [ m i i ] -> ᒦ  ; 
+define muu [ m u u ] -> ᒨ  ; 
+define maa [ m a a ] -> ᒫ  ; 
 
-define haai = [ h a a i ] -> ᓭ  ; 
-define hii = [ h i i ] -> ᓰ  ; 
-define huu = [ h u u ] -> ᓲ  ; 
-define haa = [ h a a ] -> ᓵ  ; 
+define naai [ n a a i ] -> ᓀ  ; 
+define nii [ n i i ] -> ᓃ  ; 
+define nuu [ n u u ] -> ᓅ  ; 
+define naa [ n a a ] -> ᓈ  ; 
 
-define laai = [ l a a i ] -> ᓓ  ; 
-define lii = [ l i i ] -> ᓖ  ; 
-define luu = [ l u u ] -> ᓘ  ; 
-define laa = [ l a a ] -> ᓛ  ; 
+define saai [ s a a i ] -> ᓭ  ; 
+define sii [ s i i ] -> ᓰ  ; 
+define suu [ s u u ] -> ᓲ  ; 
+define saa [ s a a ] -> ᓵ  ; 
 
-define jaai = [ j a a i ] -> ᔦ  ; 
-define jii = [ j i i ] -> ᔩ  ; 
-define juu = [ j u u ] -> ᔫ  ; 
-define jaa = [ j a a ] -> ᔮ  ; 
+define haai [ h a a i ] -> ᓭ  ; 
+define hii [ h i i ] -> ᓰ  ; 
+define huu [ h u u ] -> ᓲ  ; 
+define haa [ h a a ] -> ᓵ  ; 
 
-define vaai = [ v a a i ] -> ᕓ  ; 
-define vii = [ v i i ] -> ᕖ  ; 
-define vuu = [ v u u ] -> ᕘ  ; 
-define vaa = [ v a a ] -> ᕚ  ; 
+define laai [ l a a i ] -> ᓓ  ; 
+define lii [ l i i ] -> ᓖ  ; 
+define luu [ l u u ] -> ᓘ  ; 
+define laa [ l a a ] -> ᓛ  ; 
 
-define raai = [ r a a i ] -> ᕃ  ; 
-define rii = [ r i i ] -> ᕇ  ; 
-define ruu = [ r u u ] -> ᕉ  ; 
-define raa = [ r a a ] -> ᕌ  ; 
+define jaai [ j a a i ] -> ᔦ  ; 
+define jii [ j i i ] -> ᔩ  ; 
+define juu [ j u u ] -> ᔫ  ; 
+define jaa [ j a a ] -> ᔮ  ; 
 
-define qaai = [ q a a i ] -> ᙯ  ; 
-define qii = [ q i i ] -> ᖀ  ; 
-define quu = [ q u u ] -> ᖂ  ; 
-define qaa = [ q a a ] -> ᖄ  ; 
+define vaai [ v a a i ] -> ᕓ  ; 
+define vii [ v i i ] -> ᕖ  ; 
+define vuu [ v u u ] -> ᕘ  ; 
+define vaa [ v a a ] -> ᕚ  ; 
 
-define łii = [ ł i i ] -> ᖡ  ; 
-define łuu = [ ł u u ] -> ᖣ  ; 
-define łaa = [ ł a a ] -> ᖥ  ; 
+define raai [ r a a i ] -> ᕃ  ; 
+define rii [ r i i ] -> ᕇ  ; 
+define ruu [ r u u ] -> ᕉ  ; 
+define raa [ r a a ] -> ᕌ  ; 
 
-define aai = [ a a i ] -> ᐁ  ; 
-define ii = [ i i ] -> ᐄ  ; 
-define uu = [ u u ] -> ᐆ  ; 
-define aa = [ a a ] -> ᐋ  ; 
+define qaai [ q a a i ] -> ᙯ  ; 
+define qii [ q i i ] -> ᖀ  ; 
+define quu [ q u u ] -> ᖂ  ; 
+define qaa [ q a a ] -> ᖄ  ; 
 
+define łii [ ł i i ] -> ᖡ  ; 
+define łuu [ ł u u ] -> ᖣ  ; 
+define łaa [ ł a a ] -> ᖥ  ; 
 
-
-define nngi = [ n n g i ] -> ᙱ  ; 
-define nngu = [ n n g u ] -> ᙳ  ; 
-define nnga = [ n n g a ] -> ᙵ  ; 
-
-define ngai = [ n g a i ] -> ᙰ  ; 
-define ngi = [ n g i ] -> ᖏ  ; 
-define ngu = [ n g u ] -> ᖑ  ; 
-define nga = [ n g a ] -> ᖓ  ; 
-
-define pai = [ p a i ] -> ᐯ  ; 
-define pi = [ p i ] -> ᐱ  ; 
-define pu = [ p u ] -> ᐳ  ; 
-define pa = [ p a ] -> ᐸ  ; 
-
-define tai = [ t a i ] -> ᑌ  ; 
-define ti = [ t i ] -> ᑎ  ; 
-define tu = [ t u ] -> ᑐ  ; 
-define ta = [ t a ] -> ᑕ  ; 
-
-define kai = [ k a i ] -> ᑫ  ; 
-define ki = [ k i ] -> ᑭ  ; 
-define ku = [ k u ] -> ᑯ  ; 
-define ka = [ k a ] -> ᑲ  ; 
-
-define gai = [ g a i ] -> ᒉ  ; 
-define gi = [ g i ] -> ᒋ  ; 
-define gu = [ g u ] -> ᒍ  ; 
-define ga = [ g a ] -> ᒐ  ; 
-
-define mai = [ m a i ] -> ᒣ  ; 
-define mi = [ m i ] -> ᒥ  ; 
-define mu = [ m u ] -> ᒧ  ; 
-define ma = [ m a ] -> ᒪ  ; 
-
-define nai = [ n a i ] -> ᓀ  ; 
-define ni = [ n i ] -> ᓂ  ; 
-define nu = [ n u ] -> ᓄ  ; 
-define na = [ n a ] -> ᓇ  ; 
-
-define sai = [ s a i ] -> ᓭ  ; 
-define si = [ s i ] -> ᓯ  ; 
-define su = [ s u ] -> ᓱ  ; 
-define sa = [ s a ] -> ᓴ  ; 
-
-define hai = [ h a i ] -> ᓭ  ; 
-define hi = [ h i ] -> ᓯ  ; 
-define hu = [ h u ] -> ᓱ  ; 
-define ha = [ h a ] -> ᓴ  ; 
-
-define lai = [ l a i ] -> ᓓ  ; 
-define li = [ l i ] -> ᓕ  ; 
-define lu = [ l u ] -> ᓗ  ; 
-define la = [ l a ] -> ᓚ  ; 
-
-define jai = [ j a i ] -> ᔦ  ; 
-define ji = [ j i ] -> ᔨ  ; 
-define ju = [ j u ] -> ᔪ  ; 
-define ja = [ j a ] -> ᔭ  ; 
-
-define vai = [ v a i ] -> ᕓ  ; 
-define vi = [ v i ] -> ᕕ  ; 
-define vu = [ v u ] -> ᕗ  ; 
-define va = [ v a ] -> ᕙ  ; 
-
-define rai = [ r a i ] -> ᕃ  ; 
-define ri = [ r i ] -> ᕆ  ; 
-define ru = [ r u ] -> ᕈ  ; 
-define ra = [ r a ] -> ᕋ  ; 
-
-define qai = [ q a i ] -> ᙯ  ; 
-define qi = [ q i ] -> ᕿ  ; 
-define qu = [ q u ] -> ᖁ  ; 
-define qa = [ q a ] -> ᖃ  ; 
-
-define łi = [ ł i ] -> ᖠ  ; 
-define łu = [ ł u ] -> ᖢ  ; 
-define ła = [ ł a ] -> ᖤ  ; 
-
-define ai = [ a i ] -> ᐁ  ; 
-define i = [ i ] -> ᐃ  ; 
-define u = [ u ] -> ᐅ  ; 
-define a = [ a ] -> ᐊ  ; 
-
-define p = [ p ] -> ᑉ  ;
-define t = [ t ] -> ᑦ  ;
-define k = [ k ] -> ᒃ  ;
-define g = [ g ] -> ᖅ  ;
-define m = [ m ] -> ᒻ  ;
-define n = [ n ] -> ᓐ  ;
-
-define h = [ h ] -> ᕻ  ;
-define l = [ l ] -> ᓪ  ;
-#define #j = [ #j ] ->   ;
-define v = [ v ] -> ᕝ  ;
-define r = [ r ] -> ᕐ  ;
-define q = [ q ] -> ᖅ  ;
-define ng = [ n g ] -> ᖕ  ;
-define nng = [ n n g ] -> ᖖ  ;
-define ł = [ ł ] -> ᖦ  ;
+define aai [ a a i ] -> ᐁ  ; 
+define ii [ i i ] -> ᐄ  ; 
+define uu [ u u ] -> ᐆ  ; 
+define aa [ a a ] -> ᐋ  ; 
 
 
 
-read regex [ nngii
+define nngi [ n n g i ] -> ᙱ  ; 
+define nngu [ n n g u ] -> ᙳ  ; 
+define nnga [ n n g a ] -> ᙵ  ; 
+
+define ngai [ n g a i ] -> ᙰ  ; 
+define ngi [ n g i ] -> ᖏ  ; 
+define ngu [ n g u ] -> ᖑ  ; 
+define nga [ n g a ] -> ᖓ  ; 
+
+define pai [ p a i ] -> ᐯ  ; 
+define pi [ p i ] -> ᐱ  ; 
+define pu [ p u ] -> ᐳ  ; 
+define pa [ p a ] -> ᐸ  ; 
+
+define tai [ t a i ] -> ᑌ  ; 
+define ti [ t i ] -> ᑎ  ; 
+define tu [ t u ] -> ᑐ  ; 
+define ta [ t a ] -> ᑕ  ; 
+
+define kai [ k a i ] -> ᑫ  ; 
+define ki [ k i ] -> ᑭ  ; 
+define ku [ k u ] -> ᑯ  ; 
+define ka [ k a ] -> ᑲ  ; 
+
+define gai [ g a i ] -> ᒉ  ; 
+define gi [ g i ] -> ᒋ  ; 
+define gu [ g u ] -> ᒍ  ; 
+define ga [ g a ] -> ᒐ  ; 
+
+define mai [ m a i ] -> ᒣ  ; 
+define mi [ m i ] -> ᒥ  ; 
+define mu [ m u ] -> ᒧ  ; 
+define ma [ m a ] -> ᒪ  ; 
+
+define nai [ n a i ] -> ᓀ  ; 
+define ni [ n i ] -> ᓂ  ; 
+define nu [ n u ] -> ᓄ  ; 
+define na [ n a ] -> ᓇ  ; 
+
+define sai [ s a i ] -> ᓭ  ; 
+define si [ s i ] -> ᓯ  ; 
+define su [ s u ] -> ᓱ  ; 
+define sa [ s a ] -> ᓴ  ; 
+
+define hai [ h a i ] -> ᓭ  ; 
+define hi [ h i ] -> ᓯ  ; 
+define hu [ h u ] -> ᓱ  ; 
+define ha [ h a ] -> ᓴ  ; 
+
+define lai [ l a i ] -> ᓓ  ; 
+define li [ l i ] -> ᓕ  ; 
+define lu [ l u ] -> ᓗ  ; 
+define la [ l a ] -> ᓚ  ; 
+
+define jai [ j a i ] -> ᔦ  ; 
+define ji [ j i ] -> ᔨ  ; 
+define ju [ j u ] -> ᔪ  ; 
+define ja [ j a ] -> ᔭ  ; 
+
+define vai [ v a i ] -> ᕓ  ; 
+define vi [ v i ] -> ᕕ  ; 
+define vu [ v u ] -> ᕗ  ; 
+define va [ v a ] -> ᕙ  ; 
+
+define rai [ r a i ] -> ᕃ  ; 
+define ri [ r i ] -> ᕆ  ; 
+define ru [ r u ] -> ᕈ  ; 
+define ra [ r a ] -> ᕋ  ; 
+
+define qai [ q a i ] -> ᙯ  ; 
+define qi [ q i ] -> ᕿ  ; 
+define qu [ q u ] -> ᖁ  ; 
+define qa [ q a ] -> ᖃ  ; 
+
+define łi [ ł i ] -> ᖠ  ; 
+define łu [ ł u ] -> ᖢ  ; 
+define ła [ ł a ] -> ᖤ  ; 
+
+define ai [ a i ] -> ᐁ  ; 
+define i [ i ] -> ᐃ  ; 
+define u [ u ] -> ᐅ  ; 
+define a [ a ] -> ᐊ  ; 
+
+define p [ p ] -> ᑉ  ;
+define t [ t ] -> ᑦ  ;
+define k [ k ] -> ᒃ  ;
+define g [ g ] -> ᖅ  ;
+define m [ m ] -> ᒻ  ;
+define n [ n ] -> ᓐ  ;
+
+define h [ h ] -> ᕻ  ;
+define l [ l ] -> ᓪ  ;
+define v [ v ] -> ᕝ ;
+define r [ r ] -> ᕐ ;
+define Q [ q ] -> ᖅ ;
+define ł [ ł ] -> ᖦ ;
+
+
+
+read regex [ ngaai
+.o. paai
+.o. taai
+.o. kaai
+.o. gaai
+.o. nngii
 .o. nnguu
 .o. nngaa
 
-.o. ngaai
+.o. NNG
+
 .o. ngii
 .o. nguu
 .o. ngaa
 
-.o. paai
+.o. NG
+
 .o. pii
 .o. puu
 .o. paa
 
-.o. taai
 .o. tii
 .o. tuu
 .o. taa
 
-.o. kaai
 .o. kii
 .o. kuu
 .o. kaa
 
-.o. gaai
 .o. gii
 .o. guu
 .o. gaa
@@ -363,7 +368,7 @@ read regex [ nngii
 .o. l
 .o. v
 .o. r
-.o. q
-.o. ng
-.o. nng
+.o. Q
 .o. ł  ] ;
+
+invert net ;
