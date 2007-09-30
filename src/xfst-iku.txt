@@ -1,0 +1,177 @@
+! ======================================= !
+! FST-rules in Inuktitut - Pilot project  !
+! ======================================= !
+
+!Defining the consonant inventory
+
+define stops [ p | P | t | T | c h | k | q ] ;
+
+define cont [ v | V | s | S | s r | l | ł | ḷ | ľ | y | r | g | k h | ġ | q h  | h ] ; ! ľ palatalized unvoiced lateral
+
+define nas [ m | M | n | N | ñ | ŋ ] ; 
+
+define cns [ stops | cont | nas ] ;
+
+define vow [ i | e | a | u ] ; ! NB not in accordance with Alaskan tradition: i = strong i whereas e represents the schwa
+
+define dummy [ %> | %TRUNC | %VCTRUNC |%C | %CLIT | %FRIC | %C | %DEFRIC ] ;
+
+define segment [ cns | vow | dummy ] ;
+
+define erfalasoq [ %@P%.IV%.ON%@ | %@P%.TV%.ON%@ | %@R%.IV%.ON%@ | %@R%.TV%.ON%@ | %@D%.IV%.ON%@ | %@D%.TV%.ON%@  ] ;
+
+
+
+!********************
+!Phonological rules *
+!********************
+!define SchwaDelFric1 [ q -> ġ || e _ %SCHWADEL ] ; !Does not work aug14th
+define SchwaDel1 [ e -> 0 || vow cns _ cns %SCHWADEL ] ;
+define SchwaDel2 [ cns -> 0 || [ i | a | u ] _ %SCHWADEL ] ;
+define DelSchwaDel [ %SCHWADEL -> 0 ] ;
+define PartAssKC [ k -> g || _ ( erfalasoq ) %> [ cont | nas ] ] ;
+!define PartAssQC [ q -> ġ || _ ( erfalasoq ) %> [ cont | nas ] ] ; !Wrong. Will generate *anniġsaaġiruq
+define PartAssQC [ q -> ġ || _ ( erfalasoq ) %> [ l | ł | nas ] ] ; !To be updated
+define AssKG [ g -> k || k ( erfalasoq) %>  _ ] ;
+define AssTnas [ t -> n || _ ( erfalasoq ) %> nas ] ;
+define AssTŁ [ t -> ł || _ ( erfalasoq ) %> ł ] ;
+define AssTL [ t -> l || _ ( erfalasoq ) %> l ] ;
+define PartAssTC [ t -> r || _ (erfalasoq ) %> [ v | g ] ] ;
+define truncation [ stops -> 0 || _ ( erfalasoq ) %TRUNC ( [ %C | %DEFRIC | erfalasoq ] ) %> ] ;
+!iḷisaq@P.IV.ON@%TRUNCllatu@R.IV.ON@%>ru      indpersonaffix ;
+
+define TruncDelete [ %TRUNC -> 0 ] ;
+define fricativization [ q -> ġ || _ ( erfalasoq ) %> [ %FRIC | nas ] ] ; !????? Not verified in corpus????
+define AltKN [ k (->) ŋ || _ ( erfalasoq ) %> n ] ;
+define AltML [ m (->) v || _ %> l ] ;
+define AltNL [ n (->) l || _ %> l ] ;
+define palatŁ [ ł -> ľ || i ( cns ) ( erfalasoq ) _ ] ;
+define palatL [ l -> ḷ || i ( cns ) ( erfalasoq ) _ ] ;
+define palatN [ n -> ñ || i ( cns ) ( erfalasoq ) _ ] ;
+!define palatR [ r -> y || i ( cns ) ( erfalasoq ) _ ] ; !WRONG generates *niġiyuq
+!define AltpalatT [ t (->) c h || i ( cns ) _ ( erfalasoq ) .#. ( erfalasoq ) ] ; !Does not work 0708
+define AltpalatT [ t (->) c h || i ( cns ) _ ( erfalasoq ) \segment ] ; ! Works fine
+!define palatT [ t -> c h || i ( cns ) _ segment ] ; !WRONG generating *qimmichka
+define palatT [ t -> c h || i ( cns ) _ vow segment ] ; 
+define Rgemination [ r -> r r || vow _ vow (cns) %C %> ] ;
+define Ggemination [ g -> g g || vow _ vow (cns) ( erfalasoq ) %C %> ] ;
+define Mgemination [ m -> m m || vow _ vow (cns) ( erfalasoq ) %C %> ] ;
+define Ġgemination [ ġ -> ġ ġ || vow _ vow (cns) ( erfalasoq ) %C %> ] ;
+define ĠQgemination [ ġ -> q q || vow _ vow (cns) ( erfalasoq ) %DEFRIC %> ] ; !amaġu%DEFRIC%>k -> amaqquk
+define Gstop [ g -> k || [ t | k ] %> _ ] ;
+define Qfusion1 [ g -> ġ || q ( erfalasoq ) ( erfalasoq )%> ( erfalasoq ) _ ] ; 
+define Qfusion2 [ q -> 0 || _ ( erfalasoq ) ( erfalasoq )%> ( erfalasoq ) ġ ] ; 
+define Kfusion [ k -> 0 || _ %FRIC %> g ] ; 
+define LongTassibilation [ t -> c h || i t ( erfalasoq ) %> _ ] ; ! MUST precede assibilation
+define assibilation [ t -> s || i ( cns ) ( erfalasoq) %> _ ( erfalasoq ) vow segment ] ;
+
+!********************
+!Household utensils *
+!********************
+
+define VeryLongTruncation [ cns vow (cns) -> 0 || _ %CVCTRUNC ] ;
+define CleanVeryLongTruncation [ %CVCTRUNC -> 0 ] ;
+define DummyDeletion [ dummy -> 0 ] ;
+define GemDelete [ %C -> 0 ] ;
+define EblockDelete [ %EBLOCK -> 0 ] ; !Works because %EBLOCK is not defined as dummy
+
+!**********************
+!Simple rewrite rules *
+!**********************
+
+define SchwaReplace1 [ e -> a || _ ( dummy ) %> [ k | vow ] ] ;
+define SchwaReplace2 [ e -> i ] ;
+define StoCH [ s -> c h || t ( erfalasoq ) _ ] ;
+define CleanCH [ c h ( erfalasoq ) c h -> t c h ] ; ! This is a stupid rule cleaning up the messy set of palatalization rules. Must be reorganized away
+
+!************* 
+!The cascade *
+!*************
+
+read regex [
+!SchwaDelFric1
+!.o.
+SchwaDel1 ! [ e -> 0 || vow cns _ cns %SCHWADEL ] ;
+.o.
+SchwaDel2  ![ cns -> 0 || [ i | a | u ] %SCHWADEL ] ;
+.o.
+DelSchwaDel ![ %SCHWADEL -> 0 ] ;
+.o.
+truncation
+.o.
+TruncDelete !
+.o.
+VeryLongTruncation
+.o.
+CleanVeryLongTruncation
+.o.
+Kfusion
+.o.
+Mgemination
+.o.
+Rgemination
+.o.
+ĠQgemination  !maket@P.IV.ON@%>saaġe@R.IV.ON@%>ru%>k
+.o.
+Ġgemination
+.o.
+Ggemination
+.o.
+GemDelete
+.o.
+fricativization !atuġ@P.TV.ON@%>niaq@R.TV.ON@%>ge%>a
+.o.
+SchwaReplace1 
+.o.
+EblockDelete
+.o.
+Qfusion1 ![ g -> ġ || q ( erfalasoq ) %> _ ] ;  
+.o.
+Qfusion2
+.o.
+PartAssQC 
+.o.
+AltKN
+.o.
+AssKG ![ g -> k || k ( erfalasoq) %>  _ ] ;
+.o.
+PartAssKC ![ k -> g || _ ( erfalasoq ) %> [ cont | nas ] ] ;
+.o.
+LongTassibilation ![ t -> c h || i t ( erfalasoq ) %> _ ] ; ! MUST precede assibilation
+.o.
+PartAssTC 
+.o.
+Gstop
+.o.
+AssTnas
+.o.
+AssTL
+.o.
+AssTŁ
+.o.
+AltML
+.o.
+AltNL
+.o.
+assibilation !Is it really a very late rule??![ t -> s || i ( cns ) ( erfalasoq) %> _ ( erfalasoq ) vow segment ]
+.o.
+DummyDeletion !!make@P.IV.ON@tiq@R.IV.ON@tuq
+.o.
+palatL
+.o.
+palatŁ
+.o.
+palatN
+.o.
+!palatR
+!.o.
+AltpalatT ![ t (->) c h || i ( cns ) _ ( erfalasoq ) \segment ] ; ! Works fine
+.o.
+palatT ![ t -> c h || i ( cns ) _ vow segment ] ;
+.o.
+StoCH ! [ s -> c h || t ( erfalasoq ) _ ] ;
+.o.
+CleanCH
+.o.
+SchwaReplace2
+] ;

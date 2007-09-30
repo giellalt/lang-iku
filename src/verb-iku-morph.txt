@@ -1,0 +1,339 @@
+! =============== !
+! Verb morphology !
+! =============== !
+
+
+! Tense-Mood and pointers to derivational affxes for IV and TV
+! ============================================================
+
+! Stems are first flagged according to transitivity in IV, IV_vow, TV, and TV_vow 
+! Secondly they get derivatives and mood markers according to stem type
+! Thirdly they get personal endings
+! Fourthly they get enclitic endings
+! Finally they pass through a household utensil that clears away left-over flags
+
+
+
+LEXICON IV
+@P.IV.ON@    junctionIV ;
+
+LEXICON junctionIV
+	nominalizers ;
+	verbalderivatives ;
+	verb_intr ;
+
+LEXICON verb_intr
++V+Ind+Prs:%>tu      indpersonaffix ;
++V+Ind+Prt:%>tua     indpersonaffix ;
++V+Int:%>pi          intverbaffix2 ;
++V+Int:%>pa	     intverbaffix3 ;
++V+ConReal:%>łu      conpersonaffix ;
++V+ConUnreal:%>lu    conpersonaffix ;
++V+Cau+3Sg:%>man     clit ;
+
+
+LEXICON IV_vow
+@P.IV.ON@ junctionIV_vow ;
+
+LEXICON junctionIV_vow
+	nominalizers ;
+	verbalderivatives ; 
+	verb_intr_vow ;
+
+LEXICON verb_intr_vow
++V+Ind+Prs:%>ru      indpersonaffix ;
++V+Ind+Pst:%>rua     indpersonaffix ;
++V+Int:%>vi          intverbaffix2 ; !XXX ve?
++V+Int:%>va          intverbaffix3 ;
++V+ConReal:%>vlu     conpersonaffix ;
++V+ConUnreal:%>lu    conpersonaffix ;
++V+Cau+3Sg:%>man     clit ;
+
+LEXICON verb_intr_suq
++V+Ind+Prs:%>su      indpersonaffix ;
++V+Ind+Prt:%>sua     indpersonaffix ;
++V+Int:%>pi          intverbaffix2 ;
++V+Int:%>pa	     intverbaffix3 ;
++V+ConReal:%>łu      conpersonaffix ;
++V+ConUnreal:%>lu    conpersonaffix ;
++V+Cau+3Sg:%>man     clit ;
+
+LEXICON verb_intr_chuq
++V+Ind+Prs:%>chu      indpersonaffix ;
++V+Ind+Prt:%>chua     indpersonaffix ;
++V+Int:%>pi          intverbaffix2 ;
++V+Int:%>pa	     intverbaffix3 ;
++V+ConReal:%>łu      conpersonaffix ;
++V+ConUnreal:%>lu    conpersonaffix ;
++V+Cau+3Sg:%>man     clit ;
+
+
+! TV
+! --
+
+LEXICON TV
+@P.TV.ON@   junctionTV ;
+
+LEXICON junctionTV
+	verbalderivatives ;
+	verb_tr ;
+
+LEXICON verb_tr  
++V+Ind+Prs:%>ge     indpersonaffix_tv_12 ; 
++V+Ind+Prs:%>ga     indpersonaffix_tv_3  ; 
++V+Ind+Pst:%>raq     indpersonaffix_tv ; !XXX Note that q should be deleted in front of k
++V+Ind+Pst:%>t     indpersonaffix_tv ;   !XXX So, what about the vowel following t?
++V+Int:%>vi           intpersonaffix_tv_12 ;  !XXX affix is p/vI for 1, 2 and p/va for 3rd subj
++V+Int:%>va          intpersonaffix_tv_3  ;  !XXX affix is p/vI for 1, 2 and p/va for 3rd subj
++V+ConReal:%>łu     conpersonaffix_tv ;
++V+ConUnreal:%>lu   conpersonaffix_tv ;
+!+V+Cau+3Sg:%>      clit ;
+
+LEXICON TV_vow
+@P.TV.ON@  junctionTV_vow ;
+
+LEXICON junctionTV_vow
+	verbalderivatives ;
+	verb_tr_vow ;
+
+
+
+LEXICON verb_tr_vow 
++V+Ind+Prs:%>ge     indpersonaffix_tv_12 ; 
++V+Ind+Prs:%>ga     indpersonaffix_tv_3  ; 
++V+Ind+Pst:%>raq    indpersonaffix_tv ; !XXX
++V+Int:%>vi          intpersonaffix_tv_12 ; !XXX
++V+Int:%>va          intpersonaffix_tv_3  ;  !XXX
++V+ConReal:%>vlu    conpersonaffix_tv ;
++V+ConUnreal:%>lu   conpersonaffix_tv ;
+!+V+Cau+3Sg:%>      clit ;
+
+! Verbal derivational affixes
+! ===========================
+
+LEXICON verbalderivatives  ! hundreds of derivatives in here
++LLATU%TRUNC:%>llatu	        verbalderivatives_cont_vow ;
++LLATU=NIAQ%TRUNC:%>llatuniaq	verbalderivatives_cont ;
++NIAQ:%>niaq                    verbalderivatives_cont ; !isiq-niaq-tuq 
++NIAQ=ŊIT:%>niaŋit              verbalderivatives_cont ;
++ŊIT%TRUNC:%>ŋit                verbalderivatives_cont ;
++SAAĠE:%>saaġe	                verbalderivatives_cont_vow ;
++SAAĠE=ŊIT:%>saaġeŋit           verbalderivatives_cont ;
++TEQ%TRUNC:%>teq                verbalderivatives_cont ;
+
+LEXICON nominalizers !Taken out of verbalderivatives to avoid transitive stems going here 
++VIK%C:%>vik	 tup- ; 
+
+LEXICON verbalderivatives_cont
+@R.IV.ON@ verb_intr ;
+@R.TV.ON@ verb_tr ;
+
+LEXICON verbalderivatives_cont_vow
+@R.IV.ON@ verb_intr_vow ;
+@R.TV.ON@ verb_tr_vow ;
+
+! Person-number affixes
+! =====================
+
+! IV
+! --
+
+LEXICON indpersonaffix 
++1Sg:%>ŋa	clit_sing ;
++2Sg:%>ten	clit_sing ; ! NB not *tin to block *tiñ
++3Sg:%>q	clit_sing ; ! Acc. Edna 31
++1Du:%>guk	clit ;
++2Du:%>sik	clit ; ! tik
++3Du:%>k 	clit ; ! Acc. Edna 31
++1Pl:%>tut	clit ;
++2Pl:%>si	clit ;
++3Pl:%>t	clit ; ! Acc. Edna 31
+
+LEXICON intverbaffix2
++2Sg:%>t        clit_sing ; ! XXX rule for t/n alternation!
++2Du:%>sik      clit ; ! tik
++2Pl:%>si       clit ;
+
+LEXICON intverbaffix3
++3Sg:%>	        clit_sing ; ! ! According to Edna p. 31
++3Du:%>k 	clit ;        ! According to Edna p. 31
++3Pl:%>t	clit ;        ! According to Edna p. 31
+
+LEXICON conpersonaffix !NB Incorrect flexives. Basically just transferred from Kalaallisut
++1Sg:%>ŋa	clit_sing ;
++2Sg:%>tin	clit_sing ;
++4Sg:%>ni	clit_sing ; ! ruq ??
++1Du:%>nuk	clit ;
++2Du:%>tik	clit ; ! tik
++4Du:%>tik 	clit ; ! ruq ??
++1Pl:%>ta	clit ;
++2Pl:%>si	clit ;
++4Pl:%>tiŋ	clit ; ! r
+
+! TV
+! --
+
+LEXICON   conpersonaffix_tv 
++1Sg+3Sg:%>ŋa clit ;
+
+LEXICON indpersonaffix_tv
+ indpersonaffix_tv_12 ;
+ indpersonaffix_tv_3  ;
+
+
+LEXICON indpersonaffix_tv_12
++1Sg+2SgO:%>kpiñ    clit ;
++1Sg+2DuO:%>vsik    clit ;
++1Sg+2PlO:%>vsi     clit ;
++1Sg+3SgO:%>ga      clit ;
++1Sg+3DuO:%>ka      clit ; !(k)ka
++1Sg+3PlO:%>tka     clit ;
+
++2Sg+1SgO:%>ŋma     clit ;
++2Sg+1DuO:%>vsiguk  clit ;
++2Sg+1PlO:%>vsigut  clit ;
++2Sg+3SgO:%>n  clit ;
++2Sg+3DuO:%>kiñ  clit ;
++2Sg+3PlO:%>tin  clit ;
+
++1Du+2SgO:%>vsigiñ  clit ;
++1Du+2DuO:%>vsik  clit ;
++1Du+2PlO:%>vsi  clit ; !vsI
++1Du+3SgO:%>kpuk  clit ;
++1Du+3DuO:%>vuk  clit ; 
++1Du+3PlO:%>vuk  clit ;
+
++2Du+1SgO:%>ksik  clit ;
++2Du+1DuO:%>sik  clit ;
++2Du+1PlO:%>sik  clit ;
++2Du+3SgO:%>vsiŋŋa  clit ;
++2Du+3DuO:%>vsiguk  clit ;
++2Du+3PlO:%>vsigut  clit ;
+
++1Pl+2SgO:%>vsigiñ  clit ;
++1Pl+2DuO:%>vsik  clit ;
++1Pl+2PlO:%>vsi  clit ;
++1Pl+3SgO:%>kput  clit ;
++1Pl+3DuO:%>vut  clit ;
++1Pl+3PlO:%>vut  clit ;
+
++2Pl+1SgO:%>vsiñŋa  clit ; !grammar says vsiñŋa, looks like typo for ŋŋ
++2Pl+1DuO:%>vsiguk  clit ;
++2Pl+1PlO:%>vsigut  clit ;
++2Pl+3SgO:%>ksi  clit ;
++2Pl+3DuO:%>si  clit ;
++2Pl+3PlO:%>si  clit ;
+
+
+LEXICON indpersonaffix_tv_3 
++3Sg+1SgO:%>aŋa  clit ; ! see fn 2,3 p. 70 in Edna II
++3Sg+1SgO:%>aŋi  clit ; ! see fn 2,3 p. 70 in Edna II
++3Sg+1DuO:%>atiguk  clit ;
++3Sg+1PlO:%>atigut  clit ;
++3Sg+2SgO:%>atin  clit ;
++3Sg+2DuO:%>asik  clit ;
++3Sg+2PlO:%>asi  clit ;
++3Sg+3SgO:%>a  clit_sing ;
++3Sg+3DuO:%>ik  clit ;
++3Sg+3PlO:%>it clit ; !I(t)
+
++3Du+1SgO:%>aŋŋa  clit ; ! see fn 2,3 p. 70 in Edna II
++3Du+1SgO:%>aŋŋi  clit ; ! see fn 2,3 p. 70 in Edna II
++3Du+1DuO:%>atiguk  clit ;
++3Du+1PlO:%>atigut  clit ;
++3Du+2SgO:%>atin  clit ;
++3Du+2DuO:%>asik  clit ;
++3Du+2PlO:%>asi  clit ;
++3Du+3SgO:%>ak  clit ;
++3Du+3DuO:%>ik  clit ;
++3Du+3PlO:%>it clit ; !!ik?
+
++3Pl+1SgO:%>anŋa  clit ; ! see fn 2,3 p. 70 in Edna II (nŋ typo?)
++3Pl+1SgO:%>anni  clit ; ! see fn 2,3 p. 70 in Edna II
++3Pl+1DuO:%>atiguk clit ;
++3Pl+1PlO:%>atigut  clit ;
++3Pl+2SgO:%>atin  clit ;
++3Pl+2DuO:%>asik  clit ;
++3Pl+2PlO:%>asi  clit ;
++3Pl+3SgO:%>at  clit ; 
++3Pl+3DuO:%>ik  clit ;
++3Pl+3PlO:%>ait  clit ;
+
+!LEXICON  intpersonaffix_tv
+! intpersonaffix_tv_12 ;  !XXX affix is p/vI for 1, 2 and p/va for 3rd subj
+! intpersonaffix_tv_3  ;  !XXX affix is p/vI for 1, 2 and p/va for 3rd subj
+
+LEXICON  intpersonaffix_tv_12 !!!!! note, still wrong affixes
++1Sg+2SgO:%>giñ    clit ;
++1Sg+2DuO:%>sik    clit ;
++1Sg+2PlO:%>si     clit ;
++1Sg+3SgO:%>gu      clit ;
++1Sg+3DuO:%>gik      clit ; 
++1Sg+3PlO:%>gi     clit ;
+
++2Sg+1SgO:%>ŋa     clit ;
++2Sg+1DuO:%>siguk  clit ;
++2Sg+1PlO:%>sigut  clit ;
++2Sg+3SgO:%>uŋ  clit ;
++2Sg+3DuO:%>gik  clit ;
++2Sg+3PlO:%>gi  clit ;
+
++1Du+2SgO:%>sigiñ  clit ;
++1Du+2DuO:%>sik  clit ;
++1Du+2PlO:%>si  clit ; !vsI
++1Du+3SgO:%>sigu  clit ;
++1Du+3DuO:%>sigik  clit ; 
++1Du+3PlO:%>sigik  clit ;
+
++2Du+1SgO:%>siŋŋa  clit ;
++2Du+1DuO:%>siguk  clit ;
++2Du+1PlO:%>sigut  clit ;
++2Du+3SgO:%>tku  clit ;
++2Du+3DuO:%>tkik  clit ;
++2Du+3PlO:%>sigik  clit ; !sigik/ŋ
+
++1Pl+2SgO:%>sigiñ  clit ;
++1Pl+2DuO:%>sik  clit ;
++1Pl+2PlO:%>si  clit ;
++1Pl+3SgO:%>sigu  clit ;
++1Pl+3DuO:%>sigiŋ  clit ;
++1Pl+3PlO:%>sigiŋ  clit ;
+
++2Pl+1SgO:%>siñŋa  clit ; !grammar says vsiñŋa, looks like typo
++2Pl+1DuO:%>siguk  clit ;
++2Pl+1PlO:%>sigut  clit ;
++2Pl+3SgO:%>siuŋ  clit ;
++2Pl+3DuO:%>sigik  clit ;
++2Pl+3PlO:%>sigik  clit ;
+
+LEXICON  intpersonaffix_tv_3 !!!!! note, still wrong affixes
++3Sg+1SgO:%>ŋa  clit ; ! see fn 2,3 p. 70 in Edna II
++3Sg+1DuO:%>tiguk  clit ;
++3Sg+1PlO:%>tigut  clit ;
++3Sg+2SgO:%>tin  clit ;
++3Sg+2DuO:%>sik  clit ;
++3Sg+2PlO:%>si  clit ;
++3Sg+3SgO:%>uŋ  clit_sing ;
++3Sg+3DuO:%>gik  clit ;
++3Sg+3PlO:%>git clit ; !gI(t)
+
++3Du+1SgO:%>ŋŋa  clit ; ! see fn 2,3 p. 70 in Edna II
++3Du+1DuO:%>tiguk  clit ;
++3Du+1PlO:%>tigut  clit ;
++3Du+2SgO:%>tin  clit ;
++3Du+2DuO:%>sik  clit ;
++3Du+2PlO:%>si  clit ;
++3Du+3SgO:%>tku  clit ;
++3Du+3DuO:%>tigik  clit ;
++3Du+3PlO:%>tigik clit ; !!ik?
+
++3Pl+1SgO:%>nŋa  clit ; ! see fn 2,3 p. 70 in Edna II (nŋ typo?)
++3Pl+1DuO:%>tiguk clit ;
++3Pl+1PlO:%>tigut  clit ;
++3Pl+2SgO:%>tin  clit ;
++3Pl+2DuO:%>sik  clit ;
++3Pl+2PlO:%>si  clit ;
++3Pl+3SgO:%>rruŋ  clit ; 
++3Pl+3DuO:%>tigik  clit ;
++3Pl+3PlO:%>tigik  clit ;
+

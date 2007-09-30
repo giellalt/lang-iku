@@ -1,0 +1,15 @@
+
+
+LEXICON prop
+Nayuk	propmorph ;
+
+LEXICON pron
+suna	pronmorph ; ! what
+keña	pronmorph ; ! who
+una	pronmorph ; ! =KAL
+
+
+
+
+LEXICON Nouns
+ # ;

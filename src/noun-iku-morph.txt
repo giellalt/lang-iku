@@ -1,0 +1,138 @@
+! =============== !
+! Noun morphology !
+! =============== !
+
+!=======================!
+! Simple 1. declination !
+!=======================!
+
+LEXICON tp !aġnaq ere
+	tp_sing ;
+	tp_du ;
+	tp_pl ;
+
+LEXICON tp_sing !erre
++QAQ:%TRUNC%>qaq	IV ;
++IT:%TRUNC%>it	IV ;
++N:%TRUNC	ObliqueCases_Sg ;
++N+Abs+Sg:           clit_sing ;
++N+Rel+Sg:%TRUNC%>m  clit_sing ;
++N+Abs+Sg+1Sg:%FRIC%>ga	clit_sing ;
++N+Abs+Sg+2Sg:%TRUNC%>n	clit_sing ;
++N+Abs+Sg+3Sg:%TRUNC%>a	clit_sing ; !Not verified aġnaq
+
+
+LEXICON tp_du
++N+Abs+Du:%TRUNC%C%>k	clit ; 
++N:%C%>k        ObliqueCases_Du ; 
++N+Abs+Du+1Sg:%TRUNC%>kka	clit ;
++N+Abs+Du+2Sg:%TRUNC%>kiñ	clit ;
++N+Abs+Du+2Sg+Arch:%TRUNC%>kkiñ	clit ;
+
+LEXICON tp_pl
++N+Abs+Pl:%TRUNC%>t	clit ;
++N:%TRUNC	ObliqueCases_Pl ; 
++N+Abs+Pl+1Sg:%TRUNC%>tka	clit ;
++N+Abs+Pl+2Sg:%TRUNC%>tin	clit ;
++N+Abs+Pl+3Sg:%TRUNC%>ŋi	clit ;
++N+Rel+Pl+3Sg:%TRUNC%>ŋisa	clit ;
+
+!===========================!
+! Geminating 1. declination !
+!===========================!
+
+LEXICON tp_gem !geminating stems of 1. declination - amaġuq nusaq/nuyaq
+	tp_gem_sing ;
+	tp_gem_du ;
+	tp_gem_pl ;
+
+LEXICON	tp_gem_sing
++QAQ:%TRUNC%>qaq	IV ;
++IT:%TRUNC%>it	IV ;
+	ObliqueCases_Sg ;
++N+Abs+Sg:           clit ;
++N+Rel+Sg:%TRUNC%C%>m  clit ; ! = Kal???
++N+Abs+Sg+1Sg:%FRIC%>ga	clit ; !just a slotholder
++N+Abs+Sg+2Sg:%TRUNC%>n	clit ; !just a slotholder
+
+LEXICON	tp_gem_du
++N+Abs+Du:%TRUNC%DEFRIC%>k	clit ;
++N:%C%>k        ObliqueCases_Du ; 
++N+Abs+Du+1Sg:%TRUNC%>kka	clit ; !just a slotholder
++N+Abs+Du+2Sg:%TRUNC%>kiñ	clit ; !just a slotholder
++N+Abs+Du+2Sg+Arch:%TRUNC%>kkiñ	clit ; !just a slotholder
+
+LEXICON	tp_gem_pl
++N+Abs+Pl:%TRUNC%C%>t	clit ;
++N:%TRUNC%C%>t	ObliqueCases_Pl ; 
++N+Abs+Pl+1Sg:%TRUNC%>tka	clit ; !just a slotholder
++N+Abs+Pl+2Sg:%TRUNC%>tin	clit ; !just a slotholder
+
+
+!========================!
+! 1. declination in schwa!
+!========================!
+
+LEXICON tpt
+	tpt_sing ;
+	tpt_du ;
+	tp_pl ;
+
+LEXICON tpt_sing !aŋun:aŋute
++QAQ:%TRUNC%>qaq	IV ;
++IT:%>it	IV ;
++N:%CVCTRUNCn	ObliqueCases_Sg ;
++N+Abs+Sg:%CVCTRUNCn	clit ;
++N+Rel+Sg:%>m	clit ;
++N+Trm+Sg:%CVCTRUNCn%>mun	clit ;
++N+Abs+Sg+1Sg:%FRIC%>ga	clit ; !just a slotholder
++N+Abs+Sg+2Sg:%TRUNC%>n	clit ; !just a slotholder
+
+LEXICON tpt_du
++N+Abs+Du:%EBLOCK%>k	clit ; 
++N:%EBLOCK%>k        ObliqueCases_Du ; 
++N+Abs+Du+1Sg:%TRUNC%>kka	clit ; !just a slotholder
++N+Abs+Du+2Sg:%TRUNC%>kiñ	clit ; !just a slotholder
++N+Abs+Du+2Sg+Arch:%TRUNC%>kkiñ	clit ; !just a slotholder
+
+
+LEXICON tup !aiviq
++QAQ:%TRUNC%>qaq	IV ;
++IT:%SCHWADEL%>it	IV ;
++N:%>	ObliqueCases_Sg ;
++N+Abs+Sg:	clit ;
++N+Abs+Pl:%>%FRICit	clit ;
++N+Trm+Sg:%>mun	clit ;
++N+Abl+Sg:%>miñ	clit ;
+
+LEXICON tup- !siksrik iñuk
++QAQ:%TRUNC%>qaq	IV ;
++IT:%SCHWADEL%>it	IV ;
++N+Abs+Sg:	clit ;
++N+Abs+Du:%TRUNC%C%>k	clit ; 
++N+Abs+Pl:%TRUNC%>it	clit ;
++N+Abs+Sg+1Sg:%FRIC%>ga	clit ; 
+
+LEXICON ObliqueCases_Sg
++Loc+Sg:%>mi	clit_sing ;
++Mod+Sg:%>mik	clit_sing ;
++Trm+Sg:%>mun	clit_sing ;
+
+LEXICON ObliqueCases_Du
++Loc+Du:%>ni	clit ;
+
+LEXICON ObliqueCases_Pl
++Loc+Pl:%>ni	clit ;
++Trm+Pl:%>nun	clit ;
+
+
+! Proper nouns ! Still a dummy
+LEXICON propmorph
++N:	clit ;
+
+! Pronouns ! Still a dummy
+LEXICON pronmorph
++N:	clit ;
+
+
+
