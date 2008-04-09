@@ -15,7 +15,7 @@ s/ngii/ᖏ/g ;
 s/nguu/ᖑ/g ; 
 s/ngaa/ᖓ/g ; 
 
-s/paai/ᐯ/g ; 
+#s/paai/ᐯ/g ; 
 s/pii/ᐲ/g ; 
 s/puu/ᐴ/g ; 
 s/paa/ᐹ/g ; 
@@ -219,6 +219,9 @@ s/u/ᐅ/g ;
 s/o/ᐅ/g ; 
 s/a/ᐊ/g ; 
 
+s/ng/ᖕ/g ;
+s/nng/ᖖ/g ;
+
 s/p/ᑉ/g ;
 s/b/ᑉ/g ;
 s/t/ᑦ/g ;
@@ -236,8 +239,6 @@ s/v/ᕝ/g ;
 s/f/ᕝ/g ;
 s/r/ᕐ/g ;
 s/q/ᖅ/g ;
-s/ng/ᖕ/g ;
-s/nng/ᖖ/g ;
 s/ł/ᖦ/g ;
 
 
