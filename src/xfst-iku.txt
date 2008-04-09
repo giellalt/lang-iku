@@ -36,7 +36,7 @@ define Voicing q -> r , Q -> R || _ %> [cont|nas] ;
 
 
 !Nasalization
-define Nasalisation 
+!define Nasalisation 
 
 !Consonant Alternating
 define jtAss j -> t , J -> T || cns %> _ ;
@@ -63,7 +63,7 @@ read regex [
 .o. kgAss
 .o. kNAss
 .o. Voicing
-.o. Nasalisation
+!.o. Nasalisation
 .o. jtAss
 .o. UvAss
 .o. DummyDeletion

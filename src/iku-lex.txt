@@ -4,13 +4,13 @@
 !==================================================================================!
 
 Multichar_Symbols
-+N +V +Part
-+Sg +Du +Pl
-+1Sg +2Sg +3Sg +4Sg +1Du +2Du +3Du +4Du +1Pl +2Pl +3Pl +4Pl
-+1SgO +2SgO +3SgO +4SgO +1DuO +2DuO +3DuO +4DuO +1PlO +2PlO+3PlO +4PlO !Objects' persons
-+Abs +Rel +Trm +Loc +Abl +Mod !cases
-+Ind +Cau +ConReal +ConUnreal !Voiced is unrealized and voiceless is for ongoing or realized actions.
-+Arch !tags for archaic forms. In the pilot just use to indicate twin forms not trying to validate relative age 
++N +V +PART
++S +DU +PL
++1SG +2SG +3SG +4SG +1DU +2DU +3DU +4DU +1Pl +2Pl +3Pl +4Pl
++1SGO +2SGO +3SGO +4SGO +1DUO +2DUO +3DUO +4DUO +1PlO +2PlO+3PlO +4PlO !Objects' persons
++ABS +REL +TRM +LOC +ABL +MOD !cases
++IND +CAU +CONREAL +CONUNREAL !Voiced is unrealized and voiceless is for ongoing or realized actions.
++ARCH !tags for archaic forms. In the pilot just use to indicate twin forms not trying to validate relative age 
 
 !ch sr kh qh ! no digraphs
 ľ !digraphs plus ľ for voiceless palatalized l

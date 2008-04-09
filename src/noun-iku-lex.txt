@@ -12,4 +12,6 @@ una	pronmorph ; ! =KAL
 
 
 LEXICON Nouns
- # ;
+iglu tp ;
+qajaq tup ;
+
