@@ -2,10 +2,10 @@
 XFST = xfst -utf8
 LEXC = lexc -utf8
 
-#ifeq (victorio.uit.no, $(shell hostname))
-#XFST = /opt/sami/xerox/c-fsm/ix86-linux2.6-gcc3.4/bin/fst -utf8
-#LEXC = /opt/sami/xerox/bin/lexc -utf8
-#endif
+ifeq (victorio.uit.no, $(shell hostname))
+XFST = /opt/sami/xerox/c-fsm/ix86-linux2.6-gcc3.4/bin/fst -utf8
+LEXC = /opt/sami/xerox/bin/lexc -utf8
+endif
 
 # The default compiler for Greenlandic is the commercial version fst.
 # If you have xfst, the free version, go to the directory where you store
