@@ -89,7 +89,7 @@ comma:=,
 space:=$(empty) $(empty)
 ABBRSRCS=$(subst $(space),$(comma),$(SRCS))
 
-scripts=$(HOME)/gt/script
+scripts=$(HOME)/gtsvn/gt/script
 
 abbr: ../bin/abbr.txt
 ../bin/abbr.txt: $(scripts)/abbr-extract $(scripts)/langTools/Util.pm $(SRCS)
