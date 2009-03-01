@@ -1,17 +1,11 @@
 
 
-LEXICON prop
-Nayuk	propmorph ;
-
-LEXICON pron
-suna	pronmorph ; ! what
-keña	pronmorph ; ! who
-una	pronmorph ; ! =KAL
-
-
-
-
 LEXICON Nouns
-iglu tp ;
-qajaq tup ;
+nuna vst ; 
+inuk kst ;
+umiaq qst ;
+iglu vst ;
+qajaq qst ;
+panik kst ;
+
 

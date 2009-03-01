@@ -3,16 +3,19 @@
 ! ======================================= !
 
 !Defining the consonant inventory
-define stops [ p | P | t | T | k | K | q | Q ] ;
-define cont [ v | V | l | L | r | R | g | G | j | J ] ; 
-define fric [ s | S | ł | Ł ] ;
-define foreign [ h | H | y | Y ] ;
-define nas [ m | M | n | N | Ŋ | ŋ ] ; 
+define Stop [ p|t|k|q|P|T|K|Q ] ;
+define Cont [ v|l|r|g|j|V|L|R|G|J ] ; 
+define Fric [ s | c h | S | C h | C H ] ;
+define Foreign [ h | H | y | Y ] ;
+define Nas [ m | n | n g | M | N | N G ] ; 
 
-define cns [ stops | cont | fric | foreign | nas ] ;
-define vow [ i | I | e | E | a | A | u | U | o | O ] ; 
-define dummy [ %> | %TRUNC | %VCTRUNC |%C | %CLIT | %FRIC | %C | %DEFRIC ] ;
-define segment [ cns | vow | dummy ] ;
+define Cns [ b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z|
+             B|C|D|F|G|H|J|K|L|M|N|P|Q|R|S|T|V|W|X|Y|Z] ;
+define Vow [ i|a|u|e|o 
+             I|A|U|E|O] ; 
+define Dummy [ %> | %TRUNC | %VCTRUNC |%C | %CLIT | %FRIC | %C | %DEFRIC |
+              SCHWADEL ] ;
+define Segment [ cns | vow | dummy ] ;
 
 !define erfalasoq [ %@P%.IV%.ON%@ | %@P%.TV%.ON%@ | %@R%.IV%.ON%@ | %@R%.TV%.ON%@ | %@D%.IV%.ON%@ | %@D%.TV%.ON%@  ] ;
 
@@ -28,18 +31,18 @@ define 3cnsDeletion  Cns -> 0 || _ %> Cns Cns ;
 define TruncDeletion Cns -> 0 || _ %> %TRUNC ;
 
 !Assimilation
-define kgAss k -> g , K -> G || _ %> [j|J] ;
-define kNAss k -> ŋ , K -> Ŋ || _ %> [n|N] ;
+define kgAss k -> g   , K -> G   || _ %> [j|J] ;
+define kNAss k -> n g , K -> N G || _ %> [n|N] ;
 
 !Voicing
-define Voicing q -> r , Q -> R || _ %> [cont|nas] ;
+define Voicing q -> r , Q -> R || _ %> [Cont|Nas] ;
 
 
 !Nasalization
 !define Nasalisation 
 
 !Consonant Alternating
-define jtAss j -> t , J -> T || cns %> _ ;
+define jtAss j -> t , J -> T || Cns %> _ ;
 define UvAss k %> g -> g , q %> g -> r ;
 
 !Uvular Alternating
@@ -48,7 +51,7 @@ define UvAss k %> g -> g , q %> g -> r ;
 
 echo << Dummies >>
 
-define DummyDeletion dummy -> 0 ;
+define DummyDeletion Dummy -> 0 ;
 
 
 !************* 

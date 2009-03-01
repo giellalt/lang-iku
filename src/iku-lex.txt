@@ -1,48 +1,43 @@
-!==================================================================================!
-!This is the file that hosts the morphology for the Inuktitut morphological parser !
-!Rules for phonology and orthography are kept in the rule-file xfst-iku.txt      !
-!==================================================================================!
+!========================================================================================!
+! This is the file that hosts the symbols and POS for the Inuktitut morphological parser !
+! Rules for phonology and orthography are kept in the rule-file xfst-iku.txt             !
+! The lexicon files are found in *-iku-lex.txt files, and the morphology ones in *-iku   !
+! -morph.txt files. The closed POS have no separate morph file.                          !
+!========================================================================================!
 
 Multichar_Symbols
-+N +V +PART
-+S +DU +PL
-+1SG +2SG +3SG +4SG +1DU +2DU +3DU +4DU +1Pl +2Pl +3Pl +4Pl
-+1SGO +2SGO +3SGO +4SGO +1DUO +2DUO +3DUO +4DUO +1PlO +2PlO+3PlO +4PlO !Objects' persons
-+ABS +REL +TRM +LOC +ABL +MOD !cases
-+IND +CAU +CONREAL +CONUNREAL !Voiced is unrealized and voiceless is for ongoing or realized actions.
-+ARCH !tags for archaic forms. In the pilot just use to indicate twin forms not trying to validate relative age 
++N +V +Prt
++Sg +Du +Pl
++1Sg +2Sg +3Sg +4Sg +1Du +2Du +3Du +4Du +1Pl +2Pl +3Pl +4Pl
++1SgO +2SgO +3SgO +4SgO +1DuO +2DuO +3DuO +4DuO +1PlO +2PlO+3PlO +4PlO !Objects' persons
++Abs +Gen +Acc +Loc +All +Abl +Trs +Sim !(-,p,mik,mi,mut,mit,kkut,titut)
+!+ABS +REL +TRM +LOC +ABL +MOD !cases
++Ind +Cau +CONREAL +CONUNREAL !Voiced is unrealized and voiceless is for ongoing or realized actions.
 
-!ch sr kh qh ! no digraphs
-ľ !digraphs plus ľ for voiceless palatalized l
+
 %> !morphemeborder
-%TRUNC !truncation dummy
-%CVCTRUNC !dummy for very long truncations
-%VCTRUNC !dummy for long truncation
-%FRIC !dummy for fricativizing stem-final consonants. Needed to avoid a general rule that also would affect unwantedly as in *aaġagu for aaqagu. The alternative would have been to postulate truncating flexives with a fricative first consonant (*aiviq -q +ġit) but that is hokus pokus
-%EBLOCK !dummy to block schwa going to a (aŋutik not *aŋuttak)
-%C ! dummy for intermediate gemination
-%DEFRIC !dummy when fricatives go stops (amaġuq -> amaqquk) as apposed to %C in niġi+VIK -> niġġivik
-%SCHWADEL !dummy with derivatives truncating semi-final schwa
-!%CLIT !dummy with clitics used in Kalaallisut. This far unused in iku
+%^TRUNC !truncation dummy
+%^EBLOCK !dummy to block schwa going to a (aŋutik not *aŋuttak)
+%^C ! dummy for intermediate gemination
+%^DEFRIC !dummy when fricatives go stops (amaġuq -> amaqquk) as apposed to %C in niġi+VIK -> niġġivik
+%^SCHWADEL !dummy with derivatives truncating semi-final schwa
+!%^CLIT !dummy with clitics used in Kalaallisut. This far unused in iku
 
-@P.IV.ON@ !Flag - positive inquiry for intransitive wants IV suff
-@P.TV.ON@ !Flag - positive inquiry for intransitive wants TV suff
-@R.IV.ON@ !Flag - require test for intransitivity   gets IV suff
-@R.TV.ON@ !Flag - positive inquiry for intransitive gets TV siff
-@D.IV.ON@ !Flag - disallow test - delete string if unsaturated flag (
-@D.TV.ON@ !Flag - disalloq test - delete string if unsaturated flag (=Verb was not transitive)
+!! @P.IV.ON@ !Flag - positive inquiry for intransitive wants IV suff
+!! @P.TV.ON@ !Flag - positive inquiry for intransitive wants TV suff
+!! @R.IV.ON@ !Flag - require test for intransitivity   gets IV suff
+!! @R.TV.ON@ !Flag - positive inquiry for intransitive gets TV siff
+!! @D.IV.ON@ !Flag - disallow test - delete string if unsaturated flag (
+!! @D.TV.ON@ !Flag - disalloq test - delete string if unsaturated flag (=Verb was not transitive)
 
 
 !************************************
 !Derivational morphemes and clitics *
 !************************************
 
-+LLATU +LLATU=NIAQ +NIAQ +NIAQ=ŊIT +ŊIT +SAAĠE +SAAĠE=ŊIT +TEQ ! verb elaborating
-+VIK ! nominalizers
-+LU +GUUQ +UNA! clitics
 
 
-! This file gives the start and end of the Iñupiaq lexicon. 
+! This file gives the start and end of the Inuktitut lexicon. 
 ! The lexicon Root points at the different parts of speech.
 ! Each POS has its own file noun-iku-lex.txt, etc., which in
 ! turn points to noun-iku-morph.txt, etc.
@@ -60,11 +55,11 @@ LEXICON Root
 
 
 LEXICON part
-+Part:%>	clit ;
++Prt:%>	clit ;
 
 LEXICON clit_sing
 +UNA:%>una	clit ;
-	clit ;
+	        clit ;
 
 LEXICON clit
 +GUUQ:%>guuq	f ;
