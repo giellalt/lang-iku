@@ -13,9 +13,9 @@ define Cns [ b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z|
              B|C|D|F|G|H|J|K|L|M|N|P|Q|R|S|T|V|W|X|Y|Z] ;
 define Vow [ i|a|u|e|o 
              I|A|U|E|O] ; 
-define Dummy [ %> | %TRUNC | %VCTRUNC |%C | %CLIT | %FRIC | %C | %DEFRIC |
-              SCHWADEL ] ;
-define Segment [ cns | vow | dummy ] ;
+define Dummy [ %> | %^TRUNC | %^VCTRUNC | %^C | %^CLIT | %^FRIC | %^DEFRIC |
+              %^SCHWADEL ] ;
+define Segment [ Cns | Vow | Dummy ] ;
 
 !define erfalasoq [ %@P%.IV%.ON%@ | %@P%.TV%.ON%@ | %@R%.IV%.ON%@ | %@R%.TV%.ON%@ | %@D%.IV%.ON%@ | %@D%.TV%.ON%@  ] ;
 
@@ -28,7 +28,7 @@ define Segment [ cns | vow | dummy ] ;
 
 !Deletion
 define 3cnsDeletion  Cns -> 0 || _ %> Cns Cns ;
-define TruncDeletion Cns -> 0 || _ %> %TRUNC ;
+define TruncDeletion Cns -> 0 || _ %> %^TRUNC ;
 
 !Assimilation
 define kgAss k -> g   , K -> G   || _ %> [j|J] ;
