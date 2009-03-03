@@ -1,4 +1,12 @@
 
+! Verbs added from the alphabetical part of Dorais
 
 LEXICON Verbs
-# ;
+
+! intransitives
+aannipuq:aanni puq "il se fait mal" ;
+aittapuq:aitta puq "il ouvre grand la bouche" ;
+aivuq:ai vuq "il va" ;
+
+! transitives
+aittupaa:aittu paa "il lui donne" ;

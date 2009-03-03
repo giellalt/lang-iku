@@ -1,11 +1,100 @@
 
 
 LEXICON Nouns
-nuna vst ; 
-inuk kst ;
-umiaq qst ;
-iglu vst ;
-qajaq qst ;
-panik kst ;
+nuna vst "un pays" ; 
+inuk kst "" ;
+umiaq qst "batau" ;
+iglu vst "maison" ;
+qajaq qst "" ;
+panik kst "" ;
 
 
+! Nouns added from the thematic part of Dorais
+
+! Dorais s. 88
+ini v "la place" ;
+katak k "l'entrée" ;
+paa v "l'overture" ;
+sivu v "la partie avant de quelque choses" ;
+akunniq q "l'espace entre deux choses" ;
+ikiaq q "l'entre-deux" ;
+qitiq q "le milieu" ;
+isuk k "l'extrémité " ;
+aqu v "la partie arrière" ;
+irquq q "le bout arrière des choses oblongues " ;
+nuvuk k "la pointe d'un objet" ;
+saniraq q "le côte" ;
+sina v "le rebord" ;
+tirirquq q "le coin" ;
+talirpik k "la droite" ;
+saumik k "la gauche" ;
+sila v "l'estèrieur" ;
+
+! Dorais s. 92
+! astronomie
+qilak k "la voûte du ciel" ;
+siqiniq q "la soleil" ;
+tarqiq q "la lune" ;
+ulluriaq q "étoile" ;
+arsaaniq q "aruore boréale" ;
+ajagutaq q "arc-en-ciel" ;
+tarraq q "l'ombre" ;
+
+! les saisons
+ukiuq q "l'hiver" ;
+upirngasaq q "le printemps" ; !=D
+upirngaq q "le printemps" ; !=LB
+upirngaq q "l'été" ; !=D
+aujaq q "l'éte" ; !=LB
+ukiaq q "l'atomne" ;
+
+! les accidents géographiques
+inuilaq q "un lieu désert" ;
+maniraq q "terrain plat" ;
+natirnaq q "une plaine" ;
+quti v "terrain plat au pied d'un falaise" ;
+innaaruq q "falaise" ;
+akinnaq q "flanc de montagne" ;
+qarqaq q "montagne" ;
+narsaq q "col de montagne"
+kuuruq q "vallée étroite, aveq rivière" ;
+nuvuk k "cap, pointe" ;
+qairtuq q "rocher" ;
+tasiq q "lac" ;
+kuuk k "rivière, pointe" ;
+qamaniq q "élargissement de rivière" ;
+sarvaq q "rapide de rvière" ;
+qurluuuq q "chut d'eau, cascade" ;
+
+!Dorais s. 97
+! les types d'etres humains
+inuk k "un être humain" ;
+alla v "un indien" ;
+qallunaaq q "un blanc" ;
+tuniq q "un habitant du pays" ;
+anguti v "un homme" ;
+arnaq q "une femme" ;
+nutaraq q "un bébé" ;
+piaraq q "un enfant" ;
+uvikkaq q "un jeune" ;
+niviarsiaq q "un jeune fille" ;
+surusiq q "un garçon" ;
+inummarik k "un adulte" ;
+ittuq q "un vieillard" ;
+ningiuq q "une vieille femme" ;
+
+!l'anatomie humaine
+timi v "le corps humain" ;
+
+! s. 98
+illauq q "un foetus" ;
+qisiq q "pa peau" ;
+uvinik k "la chair"
+sauniq q "un os" ;
+patiq q "la moëille" ;
+natarquq q "un cartilage" ;
+nuki v "un nerf"
+auk k "le sang" ; 
+taqaq q "un veine" ;
+
+! b)

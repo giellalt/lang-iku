@@ -6,14 +6,15 @@
 !========================================================================================!
 
 Multichar_Symbols
-+N +V +Prt
++N +V +Part +Pron +Prop
 +Sg +Du +Pl
 +1Sg +2Sg +3Sg +4Sg +1Du +2Du +3Du +4Du +1Pl +2Pl +3Pl +4Pl
-+1SgO +2SgO +3SgO +4SgO +1DuO +2DuO +3DuO +4DuO +1PlO +2PlO+3PlO +4PlO !Objects' persons
-+Abs +Gen +Acc +Loc +All +Abl +Trs +Sim !(-,p,mik,mi,mut,mit,kkut,titut)
-!+ABS +REL +TRM +LOC +ABL +MOD !cases
-+Ind +Cau +CONREAL +CONUNREAL !Voiced is unrealized and voiceless is for ongoing or realized actions.
-
++1SgO +2SgO +3SgO +4SgO +1DuO +2DuO +3DuO +4DuO +1PlO +2PlO +3PlO +4PlO !Objects' persons
++Abs +Gen +Acc +Loc +All +Abl +Trs +Sim !(-,p,mik,mi,mut,mit,kkut,titut), Dorais terms
+!+ABS +REL +TRM +LOC +ABL +MOD !cases from an earlier attempt
++Ind +Imp +Cau +ConReal +ConUnreal ! Inupiaq moods, change these. 
++Prs +Prt ! Well, tenses.
+! The mood tags are from Iñupiaq and should probably be changed
 
 %> !morphemeborder
 %^TRUNC !truncation dummy
@@ -55,21 +56,19 @@ LEXICON Root
 
 
 LEXICON part
-+Prt:%>	clit ;
++Part:%>	clit ;
 
 LEXICON clit_sing
 +UNA:%>una	clit ;
 	        clit ;
 
 LEXICON clit
-+GUUQ:%>guuq	f ;
-+LU:%>lu	f ;
-	        f ;
++GUUQ:%>guuq f ;
++LU:%>lu     f ;
+             f ;
 
 LEXICON f
-< "@D.[IT]V.ON@" >  # ;
-
-!@D.IV.ON@  # ;
-!@D.TV.ON@  # ;
+ # ;
+! < "@D.[IT]V.ON@" >  # ; ! this is the Iñupiaq flag diacritics solution
 
 

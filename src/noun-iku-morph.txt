@@ -1,6 +1,9 @@
 ! =============== !
 ! Noun morphology !
 ! =============== !
+
+! Stem types
+
 LEXICON vst
 # ;
 
@@ -9,4 +12,6 @@ LEXICON qst
 
 LEXICON kst
 # ;
+
+
 
