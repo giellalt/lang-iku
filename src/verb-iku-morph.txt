@@ -40,3 +40,52 @@ LEXICON paa
 ! TV
 ! --
 
+
+
+
+
+
+
+
+
++1Sg+2SgO:%>  clit ;
++1Sg+3SgO:%>  clit ;
++1Sg+3DuO:%>  clit ;
++1Sg+2PlO:%>  clit ;
++1Sg+3PlO:%>  clit ;
+
++2Sg+1SgO:%>  clit ;
++2Sg+3SgO:%>  clit ;
++2Sg+3DuO:%>  clit ;
++2Sg+3PlO:%>  clit ;
+
++3Sg+1SgO:%>  clit ;
++3Sg+2SgO:%>  clit ;
++3Sg+3SgO:%>  clit ;
++3Sg+3DuO:%>  clit ;
++3Sg+1PlO:%>  clit ;
++3Sg+2PlO:%>  clit ;
++3Sg+3PlO:%>  clit ;
+
+
++1Pl+2SgO:%>  clit ;
++1Pl+3SgO:%>  clit ;
++1Pl+3DuO:%>  clit ;
++1Pl+2PlO:%>  clit ;
++1Pl+3PlO:%>  clit ;
+
++2Pl+1SgO:%>  clit ;
++2Pl+3SgO:%>  clit ;
++2Pl+3DuO:%>  clit ;
++2Pl+3PlO:%>  clit ;
+
++3Pl+1SgO:%>  clit ;
++3Pl+2SgO:%>  clit ;
++3Pl+3SgO:%>  clit ;
++3Pl+3DuO:%>  clit ;
++3Pl+2PlO:%>  clit ;
++3Pl+3PlO:%>  clit ;
+
+
+
+
