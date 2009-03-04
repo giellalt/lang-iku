@@ -66,7 +66,7 @@ quti v "terrain plat au pied d'un falaise" ;
 innaaruq q "falaise" ;
 akinnaq q "flanc de montagne" ;
 qarqaq q "montagne" ;
-narsaq q "col de montagne"
+narsaq q "col de montagne" ;
 kuuruq q "vallée étroite, aveq rivière" ;
 nuvuk k "cap, pointe" ;
 qairtuq q "rocher" ;
@@ -99,11 +99,11 @@ timi v "le corps humain" ;
 ! s. 98
 illauq q "un foetus" ;
 qisiq q "pa peau" ;
-uvinik k "la chair"
+uvinik k "la chair" ;
 sauniq q "un os" ;
 patiq q "la moëille" ;
 natarquq q "un cartilage" ;
-nuki v "un nerf"
+nuki v "un nerf" ;
 auk k "le sang" ; 
 taqaq q "un veine" ;
 
