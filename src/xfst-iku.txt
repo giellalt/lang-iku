@@ -26,7 +26,20 @@ define Segment [ Cns | Vow | Dummy ] ;
 ! headings from the technocrat file
 ! http://www.inuktitutcomputing.ca/Technocrats/ILFT_1.html
 
+! abs umiaq
+! gen umiaq>up > umia>up > umia>p umiap
+! acc umiaq>mik > umiar>mik > umiarmik
 
+define QtoR q -> r || _ %> Cns Segment ; ! umiarmik
+
+define QtoZero q -> 0 || _ %> Cns .#. , _ %> v u k ; !umiap
+
+define 3cnsDeletion  Cns -> 0 || _ %> Cns Cns ; ! umiarkkut > umiakkut
+
+! du
+define MtoN m -> n || k %> _	  ; ! nuna>ak>mut > nuna>ak>nut
+define KtoN k -> n ||      _ %> n ; ! nuna>ak>nut > nuna>an>nut
+ 
 define VowelCopy %^V -> a || Cns a _ ,, 
                  %^V -> i || Cns i _ ,, 
                  %^V -> u || Cns u _ ;

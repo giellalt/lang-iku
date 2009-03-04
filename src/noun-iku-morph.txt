@@ -13,13 +13,11 @@ LEXICON kst
 +N: Kcase ;
 
 LEXICON qst
-
 +N: SGCASE ;
 +N: DUCASE ;
 +N: PLCASE ;
 
-
-! måde 2
+! Declension
 LEXICON SGCASE
 +Abs:		 clit ;
 +Gen:%>up	 clit ;
@@ -52,6 +50,40 @@ LEXICON PLCASE
 +Abl:%>nit	 clit ;
 +Tra:%>tigut clit ;
 +Sim:%>titut clit ;
+
+
+
+! Possessor decl
+
+! Sg possr
+LEXICON SGPOSSR
++Sg:%^TRUNC%>vuk clit ;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
