@@ -26,28 +26,25 @@ define Segment [ Cns | Vow | Dummy ] ;
 ! headings from the technocrat file
 ! http://www.inuktitutcomputing.ca/Technocrats/ILFT_1.html
 
-!Deletion
-define 3cnsDeletion  Cns -> 0 || _ %> Cns Cns ;
-define TruncDeletion Cns -> 0 || _ %> %^TRUNC ;
 
-!Assimilation
-define kgAss k -> g   , K -> G   || _ %> [j|J] ;
-define kNAss k -> n g , K -> N G || _ %> [n|N] ;
+define VowelCopy %^V -> a || Cns a _ ,, 
+                 %^V -> i || Cns i _ ,, 
+                 %^V -> u || Cns u _ ;
 
-!Voicing
-define Voicing q -> r , Q -> R || _ %> [Cont|Nas] ;
+define 3Vowel [ i | u | a ] -> 0 || Vow Vow ( %> ) _ ; ! umia>up > umiap
 
 
-!Nasalization
-!define Nasalisation 
-
-!Consonant Alternating
-define jtAss j -> t , J -> T || Cns %> _ ;
-define UvAss k %> g -> g , q %> g -> r ;
-
-!Uvular Alternating
-
-!Vowel Heading
+!! !Deletion
+!! define 3cnsDeletion  Cns -> 0 || _ %> Cns Cns ;
+!! define TruncDeletion Cns -> 0 || _ %> %^TRUNC ;
+!! !Assimilation
+!! define kgAss k -> g   , K -> G   || _ %> [j|J] ;
+!! define kNAss k -> n g , K -> N G || _ %> [n|N] ;
+!! !Voicing
+!! define Voicing q -> r , Q -> R || _ %> [Cont|Nas] ;
+!! !Consonant Alternating
+!! define jtAss j -> t , J -> T || Cns %> _ ;
+!! define UvAss k %> g -> g , q %> g -> r ;
 
 echo << Dummies >>
 
@@ -61,14 +58,16 @@ define DummyDeletion Dummy -> 0 ;
 echo << Combining... >>
 
 read regex [
-    3cnsDeletion
-.o. TruncDeletion
-.o. kgAss
-.o. kNAss
-.o. Voicing
-!.o. Nasalisation
-.o. jtAss
-.o. UvAss
+    VowelCopy
+.o. 3Vowel
+!!     3cnsDeletion
+!! .o. TruncDeletion
+!! .o. kgAss
+!! .o. kNAss
+!! .o. Voicing
+!! !.o. Nasalisation
+!! .o. jtAss
+!! .o. UvAss
 .o. DummyDeletion
 
 ] ;

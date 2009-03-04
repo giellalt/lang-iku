@@ -2,11 +2,21 @@
 
 LEXICON Nouns
 nuna vst "un pays" ; 
-inuk kst "" ;
-umiaq qst "batau" ;
 iglu vst "maison" ;
-qajaq qst "" ;
+
+inuk:inu kst "" ;
 panik kst "" ;
+
+umiaq:umia qst "batau" ;
+! og lægge til q i Abs
+! umia+q
+! umia+r+mik
+umiaq qst "batau" ;
+! og stryge q i obl kasus
+! q > r / _ Nas umiaqmut > umiarmut
+
+qajaq qst "" ;
+
 
 
 ! Nouns added from the thematic part of Dorais

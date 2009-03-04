@@ -5,13 +5,63 @@
 ! Stem types
 
 LEXICON vst
-# ;
-
-LEXICON qst
-# ;
++Sg:    SGCASE ;
++Du:%^V DUCASE ;
++Pl:    PLCASE ;
 
 LEXICON kst
-# ;
+Kcase ;
+
+LEXICON qst
+
+SGCASE ;
+DUCASE ;
+PLCASE ;
+
+
+! måde 2
+LEXICON SGCASE
++Abs:		 clit ;
++Gen:%>up	 clit ;
++Acc:%>mik	 clit ;
++Loc:%>mi	 clit ;
++All:%>mut	 clit ;
++Abl:%>mit	 clit ;
++Tra:%>kkut	 clit ;
++Sim:%>titut clit ;
+
+LEXICON DUCASE
+! V forlænges
+! k til foregående V
+! q går væt
++Abs:%>k		 clit ;
++Gen:%>k	 clit ;
++Acc:%>nnik	 clit ;
++Loc:%>nni	 clit ;
++All:%>nnut	 clit ;
++Abl:%>nnit	 clit ;
++Tra:%>kkut	 clit ;
++Sim:%>ttitut clit ;
+
+LEXICON PLCASE
++Abs:%>it		 clit ;
++Gen:%>it	 clit ;
++Acc:%>nik	 clit ;
++Loc:%>ni	 clit ;
++All:%>nut	 clit ;
++Abl:%>nit	 clit ;
++Tra:%>tigut clit ;
++Sim:%>titut clit ;
+
+
+
+
+
+
+
+! #################
+
+
 
 
 LEXICON Vcase
@@ -91,6 +141,3 @@ LEXICON Qcase
 +Pl+Abl:rnit	# ;
 +Pl+Tra:rtigut	# ;
 +Pl+Sim:rtitut	# ;
-
-
-

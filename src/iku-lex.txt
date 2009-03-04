@@ -23,6 +23,8 @@ Multichar_Symbols
 %^DEFRIC !dummy when fricatives go stops (amaġuq -> amaqquk) as apposed to %C in niġi+VIK -> niġġivik
 %^SCHWADEL !dummy with derivatives truncating semi-final schwa
 !%^CLIT !dummy with clitics used in Kalaallisut. This far unused in iku
+%^V ! Unspecified vowel
+
 
 !! @P.IV.ON@ !Flag - positive inquiry for intransitive wants IV suff
 !! @P.TV.ON@ !Flag - positive inquiry for intransitive wants TV suff
