@@ -5,18 +5,18 @@
 ! Stem types
 
 LEXICON vst
-+N+Sg:    SGCASE ;
-+N+Du:%^V DUCASE ;
-+N+Pl:    PLCASE ;
++N+Sg:     SGCASE ;
++N+Du:%^Vk DUCASE ; ! du-k
++N+Pl:     PLCASE ;
 
 LEXICON kst
-+N+Sg:    SGCASE ;
-+N+Du:%^V DUCASE ;
-+N+Pl:    PLCASE ;
++N+Sg:            SGCASE ;
++N+Du:%^TRUNC%^Vk DUCASE ;
++N+Pl:            PLCASE ;
 
 LEXICON qst
 +N+Sg: SGCASE ;
-+N+Du: DUCASE ;
++N+Du:%^Vk DUCASE ;
 +N+Pl: PLCASE ;
 
 ! Declension

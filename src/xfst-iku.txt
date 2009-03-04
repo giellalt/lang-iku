@@ -14,7 +14,7 @@ define Cns [ b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z|
 define Vow [ i|a|u|e|o 
              I|A|U|E|O] ; 
 define Dummy [ %> | %^TRUNC | %^VCTRUNC | %^C | %^CLIT | %^FRIC | %^DEFRIC |
-              %^SCHWADEL ] ;
+              %^SCHWADEL | %^V ] ;
 define Segment [ Cns | Vow | Dummy ] ;
 
 !define erfalasoq [ %@P%.IV%.ON%@ | %@P%.TV%.ON%@ | %@R%.IV%.ON%@ | %@R%.TV%.ON%@ | %@D%.IV%.ON%@ | %@D%.TV%.ON%@  ] ;
@@ -30,15 +30,23 @@ define Segment [ Cns | Vow | Dummy ] ;
 ! gen umiaq>up > umia>up > umia>p umiap
 ! acc umiaq>mik > umiar>mik > umiarmik
 
+! assimileringsdel, der er forskællig;
+! q til r
 define QtoR q -> r || _ %> Cns Segment ; ! umiarmik
 
-define QtoZero q -> 0 || _ %> (Vow) Cns .#. , _ %> v u k ; !umiap
-
-define 3cnsDeletion  Cns -> 0 || _ %> Cns Cns ; ! umiarkkut > umiakkut
-
-! du
+! ... men k hele vejen til følgende nasal
 define MtoN m -> n || k %> _	  ; ! nuna>ak>mut > nuna>ak>nut
 define KtoN k -> n ||      _ %> n ; ! nuna>ak>nut > nuna>an>nut
+define KtoM k -> m ||      _ %> m ; ! inuk>mik > inum>mik
+define KtoT k -> t ||      _ %> t ; ! inuk>uk>titut
+
+! Strygningsdel, der er lig: VÆK med dem når det kommer et segment
+define QtoZero q -> 0 || _ %> (Vow) Cns .#. , _ %> v u k ; !umiap
+define KtoZero k -> 0 || _ %> (Vow) Cns .#. ;
+
+define 3cnsDeletion  Cns -> 0 || _ (%>) Cns (%>) Cns ; ! umiarkkut > umiakkut
+
+
  
 define VowelCopy %^V -> a || Cns a _ ,, 
                  %^V -> i || Cns i _ ,, 
@@ -69,7 +77,12 @@ echo << Combining... >>
 read regex [
     VowelCopy
 .o. QtoR
+.o. MtoN 
+.o. KtoN 
+.o. KtoM 
+.o. KtoT 
 .o. QtoZero
+.o. KtoZero
 .o. 3cnsDeletion
 .o. TruncDeletion
 .o. 3Vowel

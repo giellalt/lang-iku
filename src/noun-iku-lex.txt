@@ -4,7 +4,7 @@ LEXICON Nouns
 nuna vst "un pays" ; 
 iglu vst "maison" ;
 
-inuk:inu kst "" ;
+inuk kst "" ;
 panik kst "" ;
 
 umiaq qst "batau" ;
