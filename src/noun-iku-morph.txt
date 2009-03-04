@@ -10,12 +10,14 @@ LEXICON vst
 +N+Pl:    PLCASE ;
 
 LEXICON kst
-+N: Kcase ;
++N+Sg:    SGCASE ;
++N+Du:%^V DUCASE ;
++N+Pl:    PLCASE ;
 
 LEXICON qst
-+N: SGCASE ;
-+N: DUCASE ;
-+N: PLCASE ;
++N+Sg: SGCASE ;
++N+Du: DUCASE ;
++N+Pl: PLCASE ;
 
 ! Declension
 LEXICON SGCASE

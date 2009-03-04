@@ -32,7 +32,7 @@ define Segment [ Cns | Vow | Dummy ] ;
 
 define QtoR q -> r || _ %> Cns Segment ; ! umiarmik
 
-define QtoZero q -> 0 || _ %> Cns .#. , _ %> v u k ; !umiap
+define QtoZero q -> 0 || _ %> (Vow) Cns .#. , _ %> v u k ; !umiap
 
 define 3cnsDeletion  Cns -> 0 || _ %> Cns Cns ; ! umiarkkut > umiakkut
 
@@ -44,18 +44,15 @@ define VowelCopy %^V -> a || Cns a _ ,,
                  %^V -> i || Cns i _ ,, 
                  %^V -> u || Cns u _ ;
 
+
+define TruncDeletion Cns -> 0 || _ %> %^TRUNC ;
+
+
 define 3Vowel [ i | u | a ] -> 0 || Vow Vow ( %> ) _ ; ! umia>up > umiap
 
-
-!! !Deletion
-!! define 3cnsDeletion  Cns -> 0 || _ %> Cns Cns ;
-!! define TruncDeletion Cns -> 0 || _ %> %^TRUNC ;
-!! !Assimilation
 !! define kgAss k -> g   , K -> G   || _ %> [j|J] ;
 !! define kNAss k -> n g , K -> N G || _ %> [n|N] ;
-!! !Voicing
 !! define Voicing q -> r , Q -> R || _ %> [Cont|Nas] ;
-!! !Consonant Alternating
 !! define jtAss j -> t , J -> T || Cns %> _ ;
 !! define UvAss k %> g -> g , q %> g -> r ;
 
@@ -69,12 +66,13 @@ define DummyDeletion Dummy -> 0 ;
 !*************
 
 echo << Combining... >>
-
 read regex [
     VowelCopy
+.o. QtoR
+.o. QtoZero
+.o. 3cnsDeletion
+.o. TruncDeletion
 .o. 3Vowel
-!!     3cnsDeletion
-!! .o. TruncDeletion
 !! .o. kgAss
 !! .o. kNAss
 !! .o. Voicing
