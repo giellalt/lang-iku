@@ -45,9 +45,9 @@ define KtoZero k -> 0 || _ %> (Dummy) (Vow) Cns .#. ; !not -kut > -ut but inuk>u
 
 define 3cnsDeletion  Cns -> 0 || _ (%>) Cns (%>) Cns ; ! umiarkkut > umiakkut
 
-define VowelCopy %^V -> a || Cns a (Dummy) _ ,, 
-                 %^V -> i || Cns i (Dummy) _ ,, 
-                 %^V -> u || Cns u (Dummy) _ ;
+define VowelCopy %^V -> a || a (Dummy) _ ,, 
+                 %^V -> i || i (Dummy) _ ,, 
+                 %^V -> u || u (Dummy) _ ;
 
 define TruncDeletion Cns %^TRUNC -> 0  ;
 !define TruncDeletion Cns -> 0 || _ %^TRUNC ;
