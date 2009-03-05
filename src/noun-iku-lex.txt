@@ -8,8 +8,8 @@ inuk kst "" ;
 panik kst "" ;
 
 umiaq qst "batau" ;
-! og stryge q i obl kasus
-! q > r / _ Nas umiaqmut > umiarmut
+! og stryge qst i obl kasus
+! qst > r / _ Nas umiaqmut > umiarmut
 
 qajaq qst "" ;
 
@@ -18,89 +18,89 @@ qajaq qst "" ;
 ! Nouns added from the thematic part of Dorais
 
 ! Dorais s. 88
-ini v "la place" ;
-katak k "l'entrée" ;
-paa v "l'overture" ;
-sivu v "la partie avant de quelque choses" ;
-akunniq q "l'espace entre deux choses" ;
-ikiaq q "l'entre-deux" ;
-qitiq q "le milieu" ;
-isuk k "l'extrémité " ;
-aqu v "la partie arrière" ;
-irquq q "le bout arrière des choses oblongues " ;
-nuvuk k "la pointe d'un objet" ;
-saniraq q "le côte" ;
-sina v "le rebord" ;
-tirirquq q "le coin" ;
-talirpik k "la droite" ;
-saumik k "la gauche" ;
-sila v "l'estèrieur" ;
+ini vst "la place" ;
+katak kst "l'entrée" ;
+paa vst "l'overture" ;
+sivu vst "la partie avant de quelque choses" ;
+akunniq qst "l'espace entre deux choses" ;
+ikiaq qst "l'entre-deux" ;
+qitiq qst "le milieu" ;
+isuk kst "l'extrémité " ;
+aqu vst "la partie arrière" ;
+irquq qst "le bout arrière des choses oblongues " ;
+nuvuk kst "la pointe d'un objet" ;
+saniraq qst "le côte" ;
+sina vst "le rebord" ;
+tirirquq qst "le coin" ;
+talirpik kst "la droite" ;
+saumik kst "la gauche" ;
+sila vst "l'estèrieur" ;
 
 ! Dorais s. 92
 ! astronomie
-qilak k "la voûte du ciel" ;
-siqiniq q "la soleil" ;
-tarqiq q "la lune" ;
-ulluriaq q "étoile" ;
-arsaaniq q "aruore boréale" ;
-ajagutaq q "arc-en-ciel" ;
-tarraq q "l'ombre" ;
+qilak kst "la voûte du ciel" ;
+siqiniq qst "la soleil" ;
+tarqiq qst "la lune" ;
+ulluriaq qst "étoile" ;
+arsaaniq qst "aruore boréale" ;
+ajagutaq qst "arc-en-ciel" ;
+tarraq qst "l'ombre" ;
 
 ! les saisons
-ukiuq q "l'hiver" ;
-upirngasaq q "le printemps" ; !=D
-upirngaq q "le printemps" ; !=LB
-upirngaq q "l'été" ; !=D
-aujaq q "l'éte" ; !=LB
-ukiaq q "l'atomne" ;
+ukiuq qst "l'hiver" ;
+upirngasaq qst "le printemps" ; !=D
+upirngaq qst "le printemps" ; !=LB
+upirngaq qst "l'été" ; !=D
+aujaq qst "l'éte" ; !=LB
+ukiaq qst "l'atomne" ;
 
 ! les accidents géographiques
-inuilaq q "un lieu désert" ;
-maniraq q "terrain plat" ;
-natirnaq q "une plaine" ;
-quti v "terrain plat au pied d'un falaise" ;
-innaaruq q "falaise" ;
-akinnaq q "flanc de montagne" ;
-qarqaq q "montagne" ;
-narsaq q "col de montagne" ;
-kuuruq q "vallée étroite, aveq rivière" ;
-nuvuk k "cap, pointe" ;
-qairtuq q "rocher" ;
-tasiq q "lac" ;
-kuuk k "rivière, pointe" ;
-qamaniq q "élargissement de rivière" ;
-sarvaq q "rapide de rvière" ;
-qurluuuq q "chut d'eau, cascade" ;
+inuilaq qst "un lieu désert" ;
+maniraq qst "terrain plat" ;
+natirnaq qst "une plaine" ;
+quti vst "terrain plat au pied d'un falaise" ;
+innaaruq qst "falaise" ;
+akinnaq qst "flanc de montagne" ;
+qarqaq qst "montagne" ;
+narsaq qst "col de montagne" ;
+kuuruq qst "vallée étroite, aveq rivière" ;
+nuvuk kst "cap, pointe" ;
+qairtuq qst "rocher" ;
+tasiq qst "lac" ;
+kuuk kst "rivière, pointe" ;
+qamaniq qst "élargissement de rivière" ;
+sarvaq qst "rapide de rvière" ;
+qurluuuq qst "chut d'eau, cascade" ;
 
 !Dorais s. 97
 ! les types d'etres humains
-inuk k "un être humain" ;
-alla v "un indien" ;
-qallunaaq q "un blanc" ;
-tuniq q "un habitant du pays" ;
-anguti v "un homme" ;
-arnaq q "une femme" ;
-nutaraq q "un bébé" ;
-piaraq q "un enfant" ;
-uvikkaq q "un jeune" ;
-niviarsiaq q "un jeune fille" ;
-surusiq q "un garçon" ;
-inummarik k "un adulte" ;
-ittuq q "un vieillard" ;
-ningiuq q "une vieille femme" ;
+inuk kst "un être humain" ;
+alla vst "un indien" ;
+qallunaaq qst "un blanc" ;
+tuniq qst "un habitant du pays" ;
+anguti vst "un homme" ;
+arnaq qst "une femme" ;
+nutaraq qst "un bébé" ;
+piaraq qst "un enfant" ;
+uvikkaq qst "un jeune" ;
+niviarsiaq qst "un jeune fille" ;
+surusiq qst "un garçon" ;
+inummarik kst "un adulte" ;
+ittuq qst "un vieillard" ;
+ningiuq qst "une vieille femme" ;
 
 !l'anatomie humaine
-timi v "le corps humain" ;
+timi vst "le corps humain" ;
 
 ! s. 98
-illauq q "un foetus" ;
-qisiq q "pa peau" ;
-uvinik k "la chair" ;
-sauniq q "un os" ;
-patiq q "la moëille" ;
-natarquq q "un cartilage" ;
-nuki v "un nerf" ;
-auk k "le sang" ; 
-taqaq q "un veine" ;
+illauq qst "un foetus" ;
+qisiq qst "pa peau" ;
+uvinik kst "la chair" ;
+sauniq qst "un os" ;
+patiq qst "la moëille" ;
+natarquq qst "un cartilage" ;
+nuki vst "un nerf" ;
+auk kst "le sang" ; 
+taqaq qst "un veine" ;
 
 ! b)

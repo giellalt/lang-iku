@@ -6,17 +6,17 @@
 
 LEXICON vst
 +N+Sg:     SGCASE ;
-+N+Du:%^Vk DUCASE ; ! du-k
++N+Du:%>%^Vk DUCASE ; ! du-k
 +N+Pl:     PLCASE ;
 
 LEXICON kst
 +N+Sg:            SGCASE ;
-+N+Du:%^TRUNC%^Vk DUCASE ;
++N+Du:%^TRUNC%>%^Vk DUCASE ;
 +N+Pl:            PLCASE ;
 
 LEXICON qst
 +N+Sg: SGCASE ;
-+N+Du:%^Vk DUCASE ;
++N+Du:%>k DUCASE ;
 +N+Pl: PLCASE ;
 
 ! Declension
@@ -28,20 +28,20 @@ LEXICON SGCASE
 +All:%>mut	 clit ;
 +Abl:%>mit	 clit ;
 +Tra:%>kkut	 clit ;
-+Sim:%>titut clit ;
++Sim:%>titut 	clit ;
 
 LEXICON DUCASE
 ! V forlænges
 ! k til foregående V
 ! q går væt
-+Abs:%>k		 clit ;
-+Gen:%>k	 clit ;
-+Acc:%>nnik	 clit ;
-+Loc:%>nni	 clit ;
-+All:%>nnut	 clit ;
-+Abl:%>nnit	 clit ;
-+Tra:%>kkut	 clit ;
-+Sim:%>ttitut clit ;
++Abs:		 clit ;
++Gen:	         clit ;
++Acc:%>nik	 clit ;
++Loc:%>ni	 clit ;
++All:%>nut	 clit ;
++Abl:%>nit	 clit ;
++Tra:%>kut	 clit ;
++Sim:%>titut 	clit ;
 
 LEXICON PLCASE
 +Abs:%>it		 clit ;
