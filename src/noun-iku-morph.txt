@@ -18,7 +18,7 @@ LEXICON kst
 +N+Sg:            SGCASE ;
 +N+Sg:            SGPOSS ;
 +N+Du:%^TRUNC%>%^Vk DUCASE ;
-+N+Du:%^TRUNC%>     DUPOSS ;
++N+Du:%^TRUNC%>     DUPOSS ; !or %^Vk?
 +N+Pl:            PLCASE ;
 +N+Pl:            PLPOSS ;
 
@@ -141,9 +141,9 @@ DUPOSS2PL ;
 DUPOSS3PL ;
 
 LEXICON DUPOSS1SG
-+1DuPoss+Abs:%>kka clit ;
-+1DuPoss+Gen:%>mma clit ;
-+1DuPoss:%>kka     ADVLPOSSCASE ;
++1SgPoss+Abs:%>kka clit ;
++1SgPoss+Gen:%>mma clit ;
++1SgPoss:%>kka     ADVLPOSSCASE ;
 
 LEXICON DUPOSS2SG
 # ;
@@ -174,9 +174,9 @@ PLPOSS2PL ;
 PLPOSS3PL ;
 
 LEXICON PLPOSS1SG
-+1PlPoss+Abs:%>kka clit ;
-+1PlPoss+Gen:%>mma clit ;
-+1PlPoss:%>kka     ADVLPOSSCASE ;
++1SgPoss+Abs:%>kka clit ;
++1SgPoss+Gen:%>mma clit ;
++1SgPoss:%>kka     ADVLPOSSCASE ;
 
 LEXICON PLPOSS2SG
 # ;
