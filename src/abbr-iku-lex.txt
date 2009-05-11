@@ -1,2 +1,5 @@
+LEXICON Abbreviations
+Mr	abbr ;
+
 LEXICON abbr
-	# ;
++Abbr:%. # ;

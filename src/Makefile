@@ -24,7 +24,8 @@ endif
 
 SRCS = iku-lex.txt \
 	noun-iku-lex.txt verb-iku-lex.txt abbr-iku-lex.txt \
-	noun-iku-morph.txt verb-iku-morph.txt
+	noun-iku-morph.txt verb-iku-morph.txt \
+	propernoun-iku-lex.txt pronoun-iku-lex.txt
 #	acro-iku-lex.txt \
 #	punct-iku-lex.txt prt-iku-lex.txt num-iku-lex.txt 
 
