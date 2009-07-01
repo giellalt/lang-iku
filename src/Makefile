@@ -18,14 +18,19 @@ endif
 # ln -s xfst fst
 # This will give a pointer from "fst" to xfst, and the transducers will compile.
 
+# Directories:
+scripts=$(GTHOME)/gt/script
+
 
 # Source files
-
-
-SRCS = iku-lex.txt \
-	noun-iku-lex.txt verb-iku-lex.txt abbr-iku-lex.txt \
-	noun-iku-morph.txt verb-iku-morph.txt \
-	propernoun-iku-lex.txt pronoun-iku-lex.txt
+SRCS =  iku-lex.txt \
+		noun-iku-lex.txt \
+		verb-iku-lex.txt \
+		abbr-iku-lex.txt \
+		noun-iku-morph.txt \
+		verb-iku-morph.txt \
+		propernoun-iku-lex.txt \
+		pronoun-iku-lex.txt
 #	acro-iku-lex.txt \
 #	punct-iku-lex.txt prt-iku-lex.txt num-iku-lex.txt 
 
@@ -64,12 +69,8 @@ iiku.fst: ../bin/iiku.fst
 	@rm -f ../tmp/iiku-fst-script
 
 
-
-
-
 # Here comes the part building the basic parser.
 # **********************************************
-
 
 # This goal is to build the final analyser. It depends on all the files.
 
@@ -86,7 +87,6 @@ iku.fst: ../bin/iku.fst
 	@rm -f ../tmp/iku-fst-script
 
 
-
 # Here we make the abbrevation file for our current preprocessor, 
 # the perl-based preprocess (located in the script catalogue)
 
@@ -94,8 +94,6 @@ empty:=
 comma:=,
 space:=$(empty) $(empty)
 ABBRSRCS=$(subst $(space),$(comma),$(SRCS))
-
-scripts=$(HOME)/gtsvn/gt/script
 
 abbr: ../bin/abbr.txt
 ../bin/abbr.txt: $(scripts)/abbr-extract $(scripts)/langTools/Util.pm $(SRCS)
