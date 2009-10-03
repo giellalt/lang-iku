@@ -72,6 +72,11 @@ LEXICON clit
              f ;
 
 LEXICON f
+! xfst version
+! < "@D.[IT]V.ON@" >  # ; ! Deletes unwanted iv/tv combinations
+! foma version
+!   < @D.[IT]V.ON@ >  # ; 
+
  # ;
 ! < "@D.[IT]V.ON@" >  # ; ! this is the Iñupiaq flag diacritics solution
 
