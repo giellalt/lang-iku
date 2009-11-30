@@ -112,20 +112,17 @@ abbr: ../bin/abbr.txt
 caseconv.fst: ../bin/caseconv.fst
 ../bin/caseconv.fst: case.regex
 	@echo
-	@echo "*** Building caseconv.fst ***" ;
+	@echo "*** Building $(notdir $@) ***" ;
 	@echo
-	@printf "read regex < case.regex \n\
-	save stack ../bin/caseconv.fst \n\
-	quit \n" > ../tmp/caseconv-script
-	$(XFST) < ../tmp/caseconv-script
-	@rm -f ../tmp/caseconv-script
-
+	$(XFST) -e "read regex < $<" \
+			-e "save stack $@" \
+			-stop
 
 
 iku.save: ../bin/iku.save
 ../bin/iku.save: ../bin/xfst-iku.bin ../bin/iku-lex.save
 	@echo
-	@echo "*** Building the parser iku.save ***"
+	@echo "*** Building the parser $(notdir $@) ***"
 	@echo
 	@printf "read regex [[@\"../bin/iku-lex.save\"] .o. \
 	[@\"../bin/xfst-iku.bin\"]] ; \n\
@@ -143,12 +140,14 @@ iku-lex.save: ../bin/iku-lex.save
 	@echo
 	@echo "*** Building iku-lex.save ***" ;
 	@echo
-	printf "compile-source $(SRCS) \n\
-	save-source ../bin/iku-lex.save \n\
+#	$(XFST) -e "read lexc < $^" \
+#			-e "save stack $@" \
+#			-stop
+	printf "compile-source $^ \n\
+	save-source $@ \n\
 	quit \n" > ../tmp/iku-lex-save-script
 	$(LEXC) < ../tmp/iku-lex-save-script
 	@rm -f ../tmp/iku-lex-save-script
-
 
 #ifeq ($(TARGET), strict)
 #$(LEX): $(SRCS)
@@ -171,12 +170,9 @@ xfst-iku.bin: ../bin/xfst-iku.bin
 	@echo
 	@echo "*** Building xfst-iku.bin ***" ;
 	@echo
-	@printf "source xfst-iku.txt \n\
-	save stack ../bin/xfst-iku.bin \n\
-	quit \n" > ../tmp/xfst-iku-script
-	$(XFST) < ../tmp/xfst-iku-script
-	@rm -f ../tmp/xfst-iku-script
-
+	$(XFST) -e "source $<" \
+			-e "save stack $@" \
+			-stop
 
 
 syll2lat.fst: ../bin/syll2lat.fst
