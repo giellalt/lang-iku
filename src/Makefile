@@ -75,12 +75,12 @@ iiku.fst: ../bin/iiku.fst
 # This goal is to build the final analyser. It depends on all the files.
 
 iku.fst: ../bin/iku.fst
-../bin/iku.fst: ../bin/iku.save ../bin/caseconv.fst
+../bin/iku.fst: ../bin/iku.save ../bin/inituppercase.fst
 	@echo
 	@echo "*** Building iku.fst ***" ;
 	@echo
 	@printf "read regex [[@\"../bin/iku.save\"] .o. \
-	[@\"../bin/caseconv.fst\"]] ; \n\
+	[@\"../bin/inituppercase.fst\"]] ; \n\
 	save stack ../bin/iku.fst \n\
 	quit \n" > ../tmp/iku-fst-script
 	$(XFST) < ../tmp/iku-fst-script
@@ -106,11 +106,11 @@ abbr: ../bin/abbr.txt
 		--lex=$(ABBRSRCS)
 
 
-# The second goal is to build the caseconv.fst file
-# This goal depends on case.regex
+# The second goal is to build the inituppercase.fst file
+# This goal depends on inituppercase.regex
 
-caseconv.fst: ../bin/caseconv.fst
-../bin/caseconv.fst: case.regex
+inituppercase.fst: ../bin/inituppercase.fst
+../bin/inituppercase.fst: inituppercase.regex
 	@echo
 	@echo "*** Building $(notdir $@) ***" ;
 	@echo
