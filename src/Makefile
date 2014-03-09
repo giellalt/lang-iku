@@ -30,7 +30,8 @@ SRCS =  iku-lex.txt \
 		noun-iku-morph.txt \
 		verb-iku-morph.txt \
 		propernoun-iku-lex.txt \
-		pronoun-iku-lex.txt
+		pronoun-iku-lex.txt \
+		../script/latin2syllabics.xfscript
 #	acro-iku-lex.txt \
 #	punct-iku-lex.txt prt-iku-lex.txt num-iku-lex.txt 
 
@@ -199,6 +200,17 @@ lat2syll.fst: ../bin/lat2syll.fst
 	quit \n" > ../tmp/lat2syll-iku-script
 	$(XFST) < ../tmp/lat2syll-iku-script
 	@rm -f ../tmp/lat2syll-iku-script
+
+latin2syllabics.xfst: ../bin/latin2syllabics.xfst
+../bin&latin2syllabics.xfst: ../script/latin2syllabics.xfscript
+	@echo
+	@echo "*** Building latin2syllabics.xfst ***" ;
+	@echo
+	@printf "source ../script/latin2syllabics.xfscript \n\
+	save stack ../bin/latin2syllabics.xfst \n\
+	quit \n" > ../tmp/latin2syllabics-iku-script
+	$(XFST) < ../tmp/latin2syllabics-iku-script
+	@rm -f ../tmp/latin2syllabics-iku-script
 
 
 clean:
