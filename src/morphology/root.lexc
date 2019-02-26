@@ -56,6 +56,9 @@ LEXICON Root
 	pron ;
 	Verbs ;
 	Abbreviations ;
+	Punctuation ;
+	Symbols     ;
+
 !About lexica and continuations. Instead of separate lexica for words that can only be sing or only plur and others for words that can take all numbers, this is a better solution: Normal nouns are tagged tp, tup etc. whereas specials are tagged with the continuation lexicon
 
 
