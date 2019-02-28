@@ -16,6 +16,7 @@ Multichar_Symbols
 +Prs +Prt ! Well, tenses.
 ! The mood tags are from Iñupiaq and should probably be changed
 +Abbr
++Symbol !!≈ * @CODE@ = independent symbols in the text stream, like £, €, ©
 
 %> !morphemeborder
 %^TRUNC !truncation dummy
