@@ -1,0 +1,88 @@
+! ======================================= !
+! FST-rules in Inuktitut - Pilot project  !
+! ======================================= !
+
+!Defining the consonant inventory
+define Stop [ p|t|k|q|P|T|K|Q ] ;
+define Cont [ v|l|r|g|j|V|L|R|G|J ] ; 
+define Fric [ s | c h | S | C h | C H ] ;
+define Foreign [ h | H | y | Y ] ;
+define Nas [ m | n | n g | M | N | N G ] ; 
+
+define Cns [ b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z|
+             B|C|D|F|G|H|J|K|L|M|N|P|Q|R|S|T|V|W|X|Y|Z] ;
+define Vow [ i|a|u|e|o|I|A|U|E|O|%^V] ; 
+define Dummy [ %> | %^TRUNC | %^VCTRUNC | %^C | %^CLIT | %^FRIC | %^DEFRIC |
+              %^SCHWADEL ] ;
+define Segment [ Cns | Vow | Dummy ] ;
+
+!define erfalasoq [ %@P%.IV%.ON%@ | %@P%.TV%.ON%@ | %@R%.IV%.ON%@ | %@R%.TV%.ON%@ | %@D%.IV%.ON%@ | %@D%.TV%.ON%@  ] ;
+
+!********************
+!Phonological rules *
+!********************
+
+! headings from the technocrat file
+! http://www.inuktitutcomputing.ca/Technocrats/ILFT_1.html
+
+! abs umiaq
+! gen umiaq>up > umia>up > umia>p umiap
+! acc umiaq>mik > umiar>mik > umiarmik
+
+! assimileringsdel, der er forskællig;
+! q til r
+define QtoR q -> r || _ %> Cns Segment ; ! umiarmik
+
+! ... men k hele vejen til følgende nasal
+define MtoN m -> n || k %> _	  ; ! nuna>ak>mut > nuna>ak>nut
+define KtoN k -> n ||      _ %> n ; ! nuna>ak>nut > nuna>an>nut
+define KtoM k -> m ||      _ %> m ; ! inuk>mik > inum>mik
+define KtoT k -> t ||      _ %> t ; ! inuk>uk>titut
+
+! Strygningsdel, der er lig: VÆK med dem når det kommer et segment
+define QtoZero q -> 0 || _ (%>) (Dummy) (Vow) Cns .#. ; !umiap
+define KtoZero k -> 0 || _ %> (Dummy) (Vow) Cns .#. ; !not -kut > -ut but inuk>up > inuup
+
+define 3cnsDeletion  Cns -> 0 || _ (%>) Cns (%>) Cns ; ! umiarkkut > umiakkut
+
+define VowelCopy %^V -> a || a (Dummy) _ ,, 
+                 %^V -> i || i (Dummy) _ ,, 
+                 %^V -> u || u (Dummy) _ ;
+
+define TruncDeletion Cns %^TRUNC -> 0  ;
+!define TruncDeletion Cns -> 0 || _ %^TRUNC ;
+
+
+define 3Vowel [ i | u | a ] -> 0 || Vow Vow ( %> ) _ ; ! umia>up > umiap
+
+!! define kgAss k -> g   , K -> G   || _ %> [j|J] ;
+!! define kNAss k -> n g , K -> N G || _ %> [n|N] ;
+!! define Voicing q -> r , Q -> R || _ %> [Cont|Nas] ;
+!! define jtAss j -> t , J -> T || Cns %> _ ;
+!! define UvAss k %> g -> g , q %> g -> r ;
+
+echo << Dummies >>
+define DummyDeletion Dummy -> 0 ;
+
+!************* 
+!The cascade *
+!*************
+
+echo << Combining... >>
+read regex [
+ TruncDeletion
+.o. VowelCopy
+.o. QtoR
+!.o. MtoN 
+.o. KtoN 
+.o. KtoM 
+.o. KtoT 
+.o. QtoZero
+.o. KtoZero
+.o. 3Vowel
+.o. 3cnsDeletion
+.o. DummyDeletion
+
+] ;
+
+
