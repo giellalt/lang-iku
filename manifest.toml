@@ -1,0 +1,9 @@
+name = "Inuktitut"
+version = "0.1.0"
+
+[macos]
+system_pkg_id = "no.divvun.MacDivvun.iu"
+
+[windows]
+system_product_code = "23C1A974-7889-4AD4-BE09-F89AB1F2E210"
+msoffice_product_code = "AA091315-7297-4EB2-89F1-6AB5069556D8"
