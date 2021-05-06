@@ -1,4 +1,11 @@
 
+# Symbol affixes
+
+
+
+
+
+
 
 
 
@@ -198,13 +205,6 @@ Key to the Dorais tables
 
 
 
-# Symbol affixes
-
-
-
-
-
-
  * +Symbol = independent symbols in the text stream, like £, €, ©
 
 
@@ -229,6 +229,22 @@ Key to the Dorais tables
 
 
 
+
+
+
+
+
+We describe here how abbreviations are in Inuktitut are read out, e.g.
+for text-to-speech systems.
+
+For example:
+
+ * s.:syntynyt # ;  
+ * os.:omaa% sukua # ;  
+ * v.:vuosi # ;  
+ * v.:vuonna # ;  
+ * esim.:esimerkki # ; 
+ * esim.:esimerkiksi # ; 
 
 
 
@@ -284,20 +300,4 @@ Key to the Dorais tables
 % kolon% :%:     Root ;
 % sárggis% :%-   Root ; 
 % násti% :%*     Root ; 
-
-
-
-
-We describe here how abbreviations are in Inuktitut are read out, e.g.
-for text-to-speech systems.
-
-For example:
-
- * s.:syntynyt # ;  
- * os.:omaa% sukua # ;  
- * v.:vuosi # ;  
- * v.:vuonna # ;  
- * esim.:esimerkki # ; 
- * esim.:esimerkiksi # ; 
-
 
