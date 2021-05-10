@@ -1,7 +1,7 @@
 # Inuktitut documentation
 
 [![Maturity: Experiment](https://img.shields.io/badge/Maturity-Experiment-black.svg)](https://giellalt.github.io/MaturityClassification.html)
-[![License](https://img.shields.io/github/license/giellalt/lang-iku)](https://raw.githubusercontent.com/giellalt/lang-iku/develop/LICENSE)
+[![License](https://img.shields.io/github/license/giellalt/lang-iku)](https://raw.githubusercontent.com/giellalt/lang-iku/main/LICENSE)
 [![Issues](https://img.shields.io/github/issues/giellalt/lang-iku)](https://github.com/giellalt/lang-iku/issues)
 [![Build status](https://github.com/giellalt/lang-iku/workflows/Speller%20CI+CD/badge.svg)](https://github.com/giellalt/lang-iku/actions)
 
