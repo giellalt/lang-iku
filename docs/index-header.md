@@ -5,11 +5,11 @@
 [![Issues](https://img.shields.io/github/issues/giellalt/lang-iku)](https://github.com/giellalt/lang-iku/issues)
 [![Build status](https://github.com/giellalt/lang-iku/workflows/Speller%20CI+CD/badge.svg)](https://github.com/giellalt/lang-iku/actions)
 
-This page documents the work on the **Inuktitut language model**. 
+This page documents the work on the [Inuktitut language model](http://github.com/giellalt/lang-iku). 
 
 # Project documentation
 
-* Add links to project specific documentation here as needed. Keep the documentation in the `docs/` directory.
+* (Add links to project specific documentation here as needed. Keep the documentation in the `docs/` directory.)
 
 # In-source documentation
 
