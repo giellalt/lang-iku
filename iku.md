@@ -607,6 +607,42 @@ These were the set types.
 
 * * *
 <small>This (part of) documentation was generated from [../src/cg3/functions.cg3](http://github.com/giellalt/lang-iku/blob/main/../src/cg3/functions.cg3)</small>
+ * +Symbol = independent symbols in the text stream, like £, €, ©
+
+
+
+@P.IV.ON@ !Flag - positive inquiry for intransitive wants IV suff
+@P.TV.ON@ !Flag - positive inquiry for intransitive wants TV suff
+@R.IV.ON@ !Flag - require test for intransitivity   gets IV suff
+@R.TV.ON@ !Flag - positive inquiry for intransitive gets TV siff
+@D.IV.ON@ !Flag - disallow test - delete string if unsaturated flag (
+@D.TV.ON@ !Flag - disalloq test - delete string if unsaturated flag (=Verb was not transitive)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* * *
+<small>This (part of) documentation was generated from [../src/fst/root.lexc](http://github.com/giellalt/lang-iku/blob/main/../src/fst/root.lexc)</small>
+# Symbol affixes
+
+
+
+
+
+* * *
+<small>This (part of) documentation was generated from [../src/fst/affixes/symbols.lexc](http://github.com/giellalt/lang-iku/blob/main/../src/fst/affixes/symbols.lexc)</small>
 
 
 
@@ -807,42 +843,6 @@ Key to the Dorais tables
 
 * * *
 <small>This (part of) documentation was generated from [../src/fst/affixes/nouns.lexc](http://github.com/giellalt/lang-iku/blob/main/../src/fst/affixes/nouns.lexc)</small>
-# Symbol affixes
-
-
-
-
-
-* * *
-<small>This (part of) documentation was generated from [../src/fst/affixes/symbols.lexc](http://github.com/giellalt/lang-iku/blob/main/../src/fst/affixes/symbols.lexc)</small>
- * +Symbol = independent symbols in the text stream, like £, €, ©
-
-
-
-@P.IV.ON@ !Flag - positive inquiry for intransitive wants IV suff
-@P.TV.ON@ !Flag - positive inquiry for intransitive wants TV suff
-@R.IV.ON@ !Flag - require test for intransitivity   gets IV suff
-@R.TV.ON@ !Flag - positive inquiry for intransitive gets TV siff
-@D.IV.ON@ !Flag - disallow test - delete string if unsaturated flag (
-@D.TV.ON@ !Flag - disalloq test - delete string if unsaturated flag (=Verb was not transitive)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-* * *
-<small>This (part of) documentation was generated from [../src/fst/root.lexc](http://github.com/giellalt/lang-iku/blob/main/../src/fst/root.lexc)</small>
 
 
 We describe here how abbreviations are in Inuktitut are read out, e.g.
