@@ -1,78 +1,6 @@
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ###  #################
-
-
-
 
 LEXICON Vcase
 +Sg+Abs:	# ;
@@ -152,11 +80,6 @@ LEXICON Qcase
 +Pl+Tra:rtigut	# ;
 +Pl+Sim:rtitut	# ;
 
-
-
-
-
-
 Key to the Dorais tables
 
 1sg-sg ma fille
@@ -193,9 +116,9 @@ Key to the Dorais tables
 2pl-pl notre, nos deux, nos filles
 3pl-pl notre, nos deux, nos filles
 
-
-
-
-
 * * *
-<small>This (part of) documentation was generated from [../src/fst/affixes/nouns.lexc](http://github.com/giellalt/lang-iku/blob/main/../src/fst/affixes/nouns.lexc)</small>
+
+<small>This (part of) documentation was generated from [src/fst/affixes/nouns.lexc](https://github.com/giellalt/lang-iku/blob/main/src/fst/affixes/nouns.lexc)</small>
+
+---
+
