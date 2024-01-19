@@ -2,7 +2,7 @@
 <hfstspeller dtdversion="1.0" hfstversion="3">
   <info>
     <locale>iu</locale>
-    <title>Giellatekno/Divvun/UiT fst-based speller for Inuktitut</title>
+    <title>Inuktitut</title>
     <description>This is an fst-based speller for Inuktitut. It is based
     on the normative subset of the morphological analyser for Inuktitut.
     The source code can be found at:
