@@ -4,6 +4,8 @@
     * `fst/`
         * `morphology/`
             * `affixes/`
+                * [nouns.lexc](src-fst-morphology-affixes-nouns.lexc.html) ([src](https://github.com/giellalt/lang-iku/blob/main/src/fst/morphology/affixes/nouns.lexc))
+                * [symbols.lexc](src-fst-morphology-affixes-symbols.lexc.html) ([src](https://github.com/giellalt/lang-iku/blob/main/src/fst/morphology/affixes/symbols.lexc))
             * [phonology.xfscript](src-fst-morphology-phonology.xfscript.html) ([src](https://github.com/giellalt/lang-iku/blob/main/src/fst/morphology/phonology.xfscript))
             * [root.lexc](src-fst-morphology-root.lexc.html) ([src](https://github.com/giellalt/lang-iku/blob/main/src/fst/morphology/root.lexc))
         * `phonetics/`
