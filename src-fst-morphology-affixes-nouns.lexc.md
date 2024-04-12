@@ -119,6 +119,3 @@ Key to the Dorais tables
 * * *
 
 <small>This (part of) documentation was generated from [src/fst/morphology/affixes/nouns.lexc](https://github.com/giellalt/lang-iku/blob/main/src/fst/morphology/affixes/nouns.lexc)</small>
-
----
-

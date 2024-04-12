@@ -9,6 +9,3 @@ define UvAss k %> g -> g , q %> g -> r ;
 * * *
 
 <small>This (part of) documentation was generated from [src/fst/morphology/phonology.xfscript](https://github.com/giellalt/lang-iku/blob/main/src/fst/morphology/phonology.xfscript)</small>
-
----
-
