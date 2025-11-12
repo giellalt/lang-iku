@@ -1,6 +1,3 @@
-spellername = "Inuktitut"
-spellerversion = "0.1.1"
-
 # Name of the speller package in various languages.
 # The default is English + autonym:
 [speller.name]
@@ -22,3 +19,15 @@ legacy_product_codes = [
     { value = "23C1A974-7889-4AD4-BE09-F89AB1F2E210", kind = "nsis" },
     { value = "AA091315-7297-4EB2-89F1-6AB5069556D8", kind = "nsis" }
 ]
+
+[package.speller]
+name = "Inuktitut"
+version = "0.1.1"
+
+[package.grammar]
+name = "Inuktitut"
+version = "0.1.0"
+
+[package.tts-text-proc]
+name = "Inuktitut"
+version = "0.1.0"
