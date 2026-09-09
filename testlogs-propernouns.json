@@ -1,0 +1,1 @@
+{"id":"propernouns","kind":"lemma","failures":[{"lemma":"Nicholas","no_generation":["Nicholas+N+Prop+Sg+Nom"],"wrong_generation":[],"analyses":["Nicholas+N+Prop"]},{"lemma":"Mary","no_generation":["Mary+N+Prop+Sg+Nom"],"wrong_generation":[],"analyses":["Mary+N+Prop"]},{"lemma":"Annie","no_generation":["Annie+N+Prop+Sg+Nom"],"wrong_generation":[],"analyses":["Annie+N+Prop"]}]}
